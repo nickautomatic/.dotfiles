@@ -1,0 +1,33 @@
+## Git
+alias ga='git add'
+alias gb='git branch --sort=-committerdate'
+alias gbr="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'"
+alias gco='git checkout'
+alias gcm='git commit -m'
+alias gcv='git commit -v'
+alias gd='git diff'
+alias gl="git log -n 15 --graph --date-order --date=relative --pretty=format:'%C(red)%h%C(reset)%C(auto)%d%C(reset) %s %C(green)(%cr) %C(yellow) %an %C(reset)'"
+alias gm='git merge'
+alias gpl='git pull'
+alias gps='git push'
+alias gr='git remote'
+alias grb='git rebase'
+alias grs='git reset'
+alias gs='git status'
+alias gsh='git show'
+
+## Ruby
+alias be="bundle exec"
+alias rdb="spring rake db:migrate"
+alias rc="spring rails c"
+alias rg="spring rails g"
+alias rgm="spring rails g migration"
+alias rs="spring rspec"
+
+## Bash
+alias ll='ls -alFh --color'
+alias x='exit'
+
+## Windows executables:
+alias explore='explorer.exe'
+alias explorer='explorer.exe'

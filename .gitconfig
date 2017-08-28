@@ -1,0 +1,4 @@
+[core]
+	editor = vim
+[pull]
+	rebase = preserve
