@@ -2,3 +2,5 @@
 	editor = vim
 [pull]
 	rebase = preserve
+[push]
+	default = simple
