@@ -1,4 +1,6 @@
 # base.sh adapted from https://github.com/ohthatjames/.dotfiles
+source ~/.dotfiles/completion/git-completion.bash
+source ~/.dotfiles/completion/git-prompt.sh
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.bash_prompt
 
