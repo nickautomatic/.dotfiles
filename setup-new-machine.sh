@@ -5,8 +5,21 @@
 # It was written for use on Windows Subsystem for Linux (WSL), so mileage
 # may vary on other OSes.
 
+## Function to prompt for user response:
+prompt () {
+  while true; do
+    echo;
+    read -p "$1 " yn
+    case $yn in
+      [Yy]* ) return 0;;
+      [Nn]* ) return 1;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
+
 # Install Git:
-bash setup/git.sh
+if prompt "Install Git? [y/n]"; then bash setup/git.sh; fi
 
 # Install Ruby:
-bash setup/ruby.sh
+if prompt "Install Ruby? [y/n]"; then bash setup/ruby.sh; fi 
