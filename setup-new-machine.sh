@@ -35,4 +35,8 @@ if prompt "Install PHP? [y/n]"; then bash setup/php.sh; fi
 
 # Install fzf (fuzzy finder):
 bash setup/fzf.sh
- 
+
+# Nice git diffs:
+npm install -g diff-so-fancy 
+git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
+
