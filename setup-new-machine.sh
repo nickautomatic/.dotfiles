@@ -29,4 +29,7 @@ if prompt "Install Node? [y/n]"; then bash setup/node.sh; fi
 
 # Install Yarn:
 if prompt "Install Yarn? [y/n]"; then bash setup/yarn.sh; fi
+
+# Install PHP:
+if prompt "Install PHP? [y/n]"; then bash setup/php.sh; fi
  
