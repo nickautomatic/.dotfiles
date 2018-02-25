@@ -32,4 +32,7 @@ if prompt "Install Yarn? [y/n]"; then bash setup/yarn.sh; fi
 
 # Install PHP:
 if prompt "Install PHP? [y/n]"; then bash setup/php.sh; fi
+
+# Install fzf (fuzzy finder):
+bash setup/fzf.sh
  
