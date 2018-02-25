@@ -26,4 +26,7 @@ if prompt "Install Ruby? [y/n]"; then bash setup/ruby.sh; fi
 
 # Install Node:
 if prompt "Install Node? [y/n]"; then bash setup/node.sh; fi
+
+# Install Yarn:
+if prompt "Install Yarn? [y/n]"; then bash setup/yarn.sh; fi
  
