@@ -22,4 +22,8 @@ prompt () {
 if prompt "Install Git? [y/n]"; then bash setup/git.sh; fi
 
 # Install Ruby:
-if prompt "Install Ruby? [y/n]"; then bash setup/ruby.sh; fi 
+if prompt "Install Ruby? [y/n]"; then bash setup/ruby.sh; fi
+
+# Install Node:
+if prompt "Install Node? [y/n]"; then bash setup/node.sh; fi
+ 
