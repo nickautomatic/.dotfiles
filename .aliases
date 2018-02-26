@@ -28,6 +28,9 @@ alias rs="spring rspec"
 alias ll='ls -alFh --color'
 alias x='exit'
 
+# Pretty print $PATH
+alias path='echo $PATH | tr -s ":" "\n"'
+
 ## Windows executables:
 alias explore='explorer.exe'
 alias explorer='explorer.exe'
