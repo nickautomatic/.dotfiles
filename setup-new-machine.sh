@@ -33,6 +33,11 @@ if prompt "Install Yarn? [y/n]"; then bash setup/yarn.sh; fi
 # Install PHP:
 if prompt "Install PHP? [y/n]"; then bash setup/php.sh; fi
 
+# Install Vagrant:
+echo;
+echo 'Before installing Vagrant in WSL, make sure it is installed in Windows';
+if prompt "Install Vagrant? [y/n]"; then bash setup/vagrant.sh; fi
+
 # Install fzf (fuzzy finder):
 bash setup/fzf.sh
 
