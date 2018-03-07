@@ -1,15 +1,11 @@
 # Install nvm (Node Version Manager):
 # (nb. this might require some tweaking in order to allow it to work ok with sudo)
 if ! type nvm >/dev/null 2>&1; then
-  sudo sh -c 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | NVM_DIR=/usr/local/nvm bash'
-  
-  if ! grep -Fq 'nvm' ~/.bashrc; then
-    echo 'export NVM_DIR="/usr/local/nvm"' >> ~/.bashrc
-    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
-  fi
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-  export NVM_DIR="/usr/local/nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi;
 
 # Install the latest LTS version of Node:
