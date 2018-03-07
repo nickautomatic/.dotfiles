@@ -1,9 +1,12 @@
 # Install Ruby:
-apt-add-repository ppa:brightbox/ruby-ng
-apt-get update
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
 
 # Ruby dependencies:
-apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt-get install -y build-essential
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libreadline-dev
+sudo apt-get install -y zlib1g-dev
 
 # Install rbenv:
 if ! type rbenv >/dev/null 2>&1; then
@@ -12,7 +15,7 @@ if ! type rbenv >/dev/null 2>&1; then
   echo 'eval "$(rbenv init -)"' >> ~/.bashrc
   source ~/.bashrc
 
-  mkdir -p "$(rbenv root)"/plugins
+  mkdir "$(rbenv root)"/plugins
   git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 fi;
 
