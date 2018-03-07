@@ -36,6 +36,7 @@ if prompt "Install Yarn? [y/n]"; then source ${SETUP_DIR}/yarn.sh; fi
 
 # Install PHP:
 if prompt "Install PHP? [y/n]"; then source ${SETUP_DIR}/php.sh; fi
+if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
 
 # Install Vagrant:
 echo;
