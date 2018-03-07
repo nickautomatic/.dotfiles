@@ -20,7 +20,7 @@ if ! type rbenv >/dev/null 2>&1; then
 fi;
 
 # Install ruby:
-RUBY_VERSION=2.4.2
+RUBY_VERSION=2.4.3
 if (! type ruby || ! ruby -v | grep $RUBY_VERSION) >/dev/null 2>&1; then
   rbenv install $RUBY_VERSION
   rbenv global $RUBY_VERSION
