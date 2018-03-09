@@ -34,6 +34,9 @@ if prompt "Install Node? [y/n]"; then source ${SETUP_DIR}/node.sh; fi
 # Install Yarn:
 if prompt "Install Yarn? [y/n]"; then source ${SETUP_DIR}/yarn.sh; fi
 
+# Install MySQL:
+if prompt "Install MySQL? [y/n]"; then source ${SETUP_DIR}/mysql.sh; fi
+
 # Install PHP:
 if prompt "Install PHP? [y/n]"; then source ${SETUP_DIR}/php.sh; fi
 if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
