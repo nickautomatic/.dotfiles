@@ -37,6 +37,9 @@ if prompt "Install Yarn? [y/n]"; then source ${SETUP_DIR}/yarn.sh; fi
 # Install MySQL:
 if prompt "Install MySQL? [y/n]"; then source ${SETUP_DIR}/mysql.sh; fi
 
+# Install Elasticsearch:
+if prompt "Install Elasticsearch? [y/n]"; then source ${SETUP_DIR}/elasticsearch.sh; fi
+
 # Install PHP:
 if prompt "Install PHP? [y/n]"; then source ${SETUP_DIR}/php.sh; fi
 if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
