@@ -40,6 +40,9 @@ if prompt "Install Yarn? [y/n]"; then source ${SETUP_DIR}/yarn.sh; fi
 # Install MySQL:
 if prompt "Install MySQL? [y/n]"; then source ${SETUP_DIR}/mysql.sh; fi
 
+# Install Postgres:
+if prompt "Install PostgreSQL? [y/n]"; then source ${SETUP_DIR}/postgresql.sh; fi
+
 # Install Redis:
 if prompt "Install Redis? [y/n]"; then source ${SETUP_DIR}/redis.sh; fi
 
