@@ -26,7 +26,10 @@ prompt () {
 if prompt "Install Git? [y/n]"; then source ${SETUP_DIR}/git.sh; fi
 
 # Install Ruby:
-if prompt "Install Ruby? [y/n]"; then source ${SETUP_DIR}/ruby.sh; fi
+if prompt "Install Ruby? [y/n]"; then
+  source ${SETUP_DIR}/ruby.sh; # ruby itself
+  source ${SETUP_DIR}/gem.sh;  # some gems
+fi
 
 # Install Node:
 if prompt "Install Node? [y/n]"; then source ${SETUP_DIR}/node.sh; fi
