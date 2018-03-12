@@ -5,3 +5,7 @@ fi;
 
 # Include dotfiles .gitconfig:
 git config --global include.path ~/.dotfiles/.gitconfig
+
+# Symlink some things:
+[ ! -e ~/.gemrc ] && ln -s ~/.dotfiles/.gemrc ~/.gemrc
+
