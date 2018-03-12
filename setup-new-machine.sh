@@ -59,3 +59,6 @@ source ${SETUP_DIR}/fzf.sh
 npm install -g diff-so-fancy 
 git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
 
+# Simplified man pages:
+npm install -g tldr
+
