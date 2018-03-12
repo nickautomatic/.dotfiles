@@ -15,3 +15,7 @@ then
     source $file
   done
 fi
+
+# Launch SSH agent:
+source ~/.dotfiles/scripts/ssh.sh
+
