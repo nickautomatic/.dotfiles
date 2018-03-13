@@ -43,6 +43,9 @@ if prompt "Install MySQL? [y/n]"; then source ${SETUP_DIR}/mysql.sh; fi
 # Install Postgres:
 if prompt "Install PostgreSQL? [y/n]"; then source ${SETUP_DIR}/postgresql.sh; fi
 
+# Install Python:
+if prompt "Install Python? [y/n]"; then source ${SETUP_DIR}/python.sh; fi
+
 # Install Redis:
 if prompt "Install Redis? [y/n]"; then source ${SETUP_DIR}/redis.sh; fi
 
