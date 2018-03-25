@@ -67,13 +67,17 @@ echo;
 echo 'Before installing Vagrant in WSL, make sure it is installed in Windows';
 if prompt "Install Vagrant? [y/n]"; then source setup/vagrant.sh; fi
 
-# Install fzf (fuzzy finder):
-source ${SETUP_DIR}/fzf.sh
+# Install some helpful tools:
+if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
+  # Install fzf (fuzzy finder):
+  source ${SETUP_DIR}/fzf.sh
 
-# Nice git diffs:
-npm install -g diff-so-fancy 
-git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
+  # Nice git diffs:
+  npm install -g diff-so-fancy 
+  git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
 
-# Simplified man pages:
-npm install -g tldr
+  # Simplified man pages:
+  npm install -g tldr
+  tldr --update
+fi;
 
