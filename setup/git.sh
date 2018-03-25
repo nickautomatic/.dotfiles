@@ -1,6 +1,7 @@
 # Add repositories:
-apt-add-repository ppa:git-core/ppa
-apt-get update
+sudo apt-add-repository ppa:git-core/ppa
+sudo apt-get update
 
 # Install Git:
-apt-get install git
+sudo apt-get install git
+
