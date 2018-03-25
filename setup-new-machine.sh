@@ -22,6 +22,9 @@ prompt () {
   done
 }
 
+# Install build essentials:
+source ${SETUP_DIR}/build-essential.sh;
+
 # Install Git:
 if prompt "Install Git? [y/n]"; then source ${SETUP_DIR}/git.sh; fi
 
