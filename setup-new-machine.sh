@@ -76,7 +76,10 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   npm install -g diff-so-fancy 
   git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
 
-  # tig for a handy UI for git:
+  # htop - an interactive process viewer for Unix
+  sudo apt-get install htop
+
+  # tig - a handy UI for git:
   sudo apt-get install tig
 
   # Simplified man pages:
