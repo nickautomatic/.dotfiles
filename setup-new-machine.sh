@@ -72,6 +72,9 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # Install fzf (fuzzy finder):
   source ${SETUP_DIR}/fzf.sh
 
+  # Install z (rupa/z):
+  source ${SETUP_DIR}/z.sh
+
   # Nice git diffs:
   npm install -g diff-so-fancy 
   git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
