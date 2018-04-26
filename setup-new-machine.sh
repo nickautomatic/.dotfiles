@@ -85,9 +85,6 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # tig - a handy UI for git:
   sudo apt-get install tig
 
-  # tmux - a terminal multiplexer for multiple sessions and panes in the terminal
-  sudo apt-get install tmux
-
   # Simplified man pages:
   npm install -g tldr
   tldr --update
