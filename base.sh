@@ -2,6 +2,7 @@
 source ~/.dotfiles/completion/git-completion.bash
 source ~/.dotfiles/completion/git-prompt.sh
 source ~/.dotfiles/.aliases
+source ~/.dotfiles/.bash_profile
 source ~/.dotfiles/.bash_prompt
 
 # .extra is an optional .gitignored file for local settings:
