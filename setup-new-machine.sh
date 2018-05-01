@@ -82,6 +82,9 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # htop - an interactive process viewer for Unix
   sudo apt-get install htop
 
+  # httpie - a more user-friendly alternative to curl
+  sudo apt-get install httpie
+
   # tig - a handy UI for git:
   sudo apt-get install tig
 
