@@ -85,6 +85,9 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # httpie - a more user-friendly alternative to curl
   sudo apt-get install httpie
 
+  # lynx - a text browser for the World Wide Web
+  sudo apt-get install lynx
+
   # tig - a handy UI for git:
   sudo apt-get install tig
 
