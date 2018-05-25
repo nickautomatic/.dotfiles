@@ -3,6 +3,7 @@ alias ga='git add'
 alias gb='git branch --sort=-committerdate'
 alias gbr="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'"
 alias gco='git checkout'
+alias gcoi="gbr | fzf --ansi | awk '{print \$1;}' | xargs git checkout"
 alias gcm='git commit -m'
 alias gcv='git commit -v'
 alias gd='git diff'
