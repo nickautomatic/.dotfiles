@@ -8,5 +8,6 @@ git config --global include.path ~/.dotfiles/.gitconfig
 
 # Symlink some things:
 [ ! -e ~/.gemrc ] && ln -s ~/.dotfiles/.gemrc ~/.gemrc
+[ ! -e ~/.tigrc ] && ln -s ~/.dotfiles/.gemrc ~/.tigrc
 [ ! -e ~/.vimrc ] && ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
