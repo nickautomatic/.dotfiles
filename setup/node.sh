@@ -11,6 +11,9 @@ fi;
 # Install the latest LTS version of Node:
 nvm install --lts
 
+# Make sure nvm uses the latest available node version by default:
+nvm alias default node
+
 # Use it (without having to open a new terminal):
 nvm use node
 
