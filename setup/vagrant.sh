@@ -7,3 +7,7 @@ if (! grep "VAGRANT_WSL_ENABLE_WINDOWS_ACCESS" ~/.bashrc) >/dev/null; then
   echo 'export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"' >> ~/.bashrc
 fi
 
+if (! grep "/mnt/c/Program Files/Oracle/VirtualBox" ~/.bashrc) >/dev/null; then
+  echo 'export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"' >> ~/.bashrc
+fi
+
