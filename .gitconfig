@@ -4,3 +4,5 @@
   rebase = preserve
 [push]
   default = simple
+[rebase]
+  autosquash = true
