@@ -1,6 +1,6 @@
 [core]
-	editor = vim
+  editor = vim
 [pull]
-	rebase = preserve
+  rebase = preserve
 [push]
-	default = simple
+  default = simple
