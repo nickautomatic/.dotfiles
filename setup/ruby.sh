@@ -19,7 +19,7 @@ if ! type rbenv >/dev/null 2>&1; then
 fi;
 
 # Install ruby:
-RUBY_VERSION=2.5.1
+RUBY_VERSION=2.5.3
 if (! type ruby || ! ruby -v | grep $RUBY_VERSION) >/dev/null 2>&1; then
   # Make sure ruby-build is up-to-date:
   (cd "$(rbenv root)"/plugins/ruby-build && git pull)
