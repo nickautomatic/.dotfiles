@@ -94,5 +94,8 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # Simplified man pages:
   npm install -g tldr
   tldr --update
+
+  # ngrok - expose localhost to the internet
+  npm install -g ngrok
 fi;
 
