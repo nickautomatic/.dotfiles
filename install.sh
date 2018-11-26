@@ -10,4 +10,5 @@ git config --global include.path ~/.dotfiles/.gitconfig
 [ ! -e ~/.gemrc ] && ln -s ~/.dotfiles/.gemrc ~/.gemrc
 [ ! -e ~/.tigrc ] && ln -s ~/.dotfiles/.gemrc ~/.tigrc
 [ ! -e ~/.vimrc ] && ln -s ~/.dotfiles/.vimrc ~/.vimrc
+[ ! -e ~/.tmux.conf ] && ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
