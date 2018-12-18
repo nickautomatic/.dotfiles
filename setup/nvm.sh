@@ -1,7 +1,7 @@
 # Install nvm (Node Version Manager):
 # (nb. this might require some tweaking in order to allow it to work ok
 # with sudo)
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
 if ! type nvm >/dev/null 2>&1; then
   export NVM_DIR="$HOME/.nvm"
