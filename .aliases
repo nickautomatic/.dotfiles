@@ -16,6 +16,7 @@ alias grb='git rebase'
 alias grs='git reset'
 alias gs='git status'
 alias gsh='git show'
+alias gwip='git add . && git commit -m "WIP" --no-verify'
 
 ## Ruby
 alias be="bundle exec"
