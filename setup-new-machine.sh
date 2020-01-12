@@ -59,9 +59,6 @@ if prompt "Install Elasticsearch? [y/n]"; then source ${SETUP_DIR}/elasticsearch
 if prompt "Install PHP? [y/n]"; then source ${SETUP_DIR}/php.sh; fi
 if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
 
-# Install PHP:
-if prompt "Install PhantomJS? [y/n]"; then source ${SETUP_DIR}/phantomjs.sh; fi
-
 # Install Vagrant:
 echo;
 echo 'Before installing Vagrant in WSL, make sure it is installed in Windows';
