@@ -7,3 +7,4 @@
       tags: [ extra ]
   vars:
     - home: "{{ ansible_env['HOME'] }}"
+    - asdf_version: 0.7.8
