@@ -4,6 +4,7 @@
     dest: "~/{{ item }}"
     state: link
   with_items:
+  - .asdfrc
   - .gemrc
   - .gitignore_global
   - .tigrc
