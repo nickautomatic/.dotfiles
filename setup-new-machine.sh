@@ -66,6 +66,9 @@ if prompt "Install Vagrant? [y/n]"; then source setup/vagrant.sh; fi
 
 # Install some helpful tools:
 if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
+  # Install ag (silver searcher):
+  sudo apt-get install silversearcher-ag
+
   # Install fzf (fuzzy finder):
   source ${SETUP_DIR}/fzf.sh
 
