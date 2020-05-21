@@ -41,6 +41,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 ## Windows executables:
 alias explore='explorer.exe'
 alias explorer='explorer.exe'
+alias multipass='/mnt/c/Program\ Files/Multipass/bin/multipass.exe'
 alias open='cmd.exe /C start'
 alias start='cmd.exe /C start'
 
