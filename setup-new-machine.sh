@@ -69,6 +69,9 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # Install ag (silver searcher):
   sudo apt-get install silversearcher-ag
 
+  # Install ripgrep:
+  sudo apt-get install ripgrep
+
   # Install fzf (fuzzy finder):
   source ${SETUP_DIR}/fzf.sh
 
