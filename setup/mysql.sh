@@ -12,3 +12,7 @@ fi;
 # Start MySQL:
 sudo service mysql start
 
+# Use password rather than socket plugin:
+sudo mysql -u root -e "UPDATE mysql.user SET plugin='mysql_native_password' WHERE user='root' AND plugin='unix_socket';"
+sudo mysql -u root -e "FLUSH PRIVILEGES;"
+
