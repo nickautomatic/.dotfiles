@@ -72,6 +72,9 @@ if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # Install ripgrep:
   sudo apt-get install ripgrep
 
+  # Install fd (fast alternative to find):
+  sudo apt install fd-find
+
   # Install fzf (fuzzy finder):
   source ${SETUP_DIR}/fzf.sh
 
