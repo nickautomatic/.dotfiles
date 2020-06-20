@@ -1,4 +1,5 @@
 set colorcolumn=73 " Visually indicate where text will wrap
+highlight ColorColumn ctermbg=235
 
 set autoindent   " Auto-indent
 set expandtab    " Expand tabs to spaces
