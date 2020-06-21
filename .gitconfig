@@ -8,6 +8,7 @@
   cv = commit -v
   d = diff
   ds = diff --staged
+  l = log -n 15 --graph --date-order --date=relative --pretty='format:%C(red)%h%C(reset)%C(auto)%d%C(reset) %s %C(green)(%cr) %C(yellow) %an %C(reset)'
   m = merge
   rb = rebase
   rbi = rebase -i
