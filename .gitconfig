@@ -2,7 +2,7 @@
   a = add
   ap = add -p
   b = branch
-  co = checkout
+  ch = checkout
   c = commit
   cm = commit -m
   cv = commit -v
