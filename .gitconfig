@@ -16,6 +16,7 @@
   s = status
   sh = show
   st = status
+  wip = "!git add . && git commit --no-verify -m 'WIP'"
 [commit]
   verbose = true
 [core]
