@@ -16,6 +16,8 @@
   s = status
   sh = show
   st = status
+[commit]
+  verbose = true
 [core]
   editor = vim
   pager = diff-so-fancy | less --tabs=4 -RFX
