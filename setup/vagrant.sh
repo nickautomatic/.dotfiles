@@ -1,4 +1,4 @@
-VAGRANT_VERSION=2.2.7
+VAGRANT_VERSION=2.2.9
 wget https://releases.hashicorp.com/vagrant/${VAGRANT_VERSION}/vagrant_${VAGRANT_VERSION}_x86_64.deb
 sudo dpkg -i vagrant_${VAGRANT_VERSION}_x86_64.deb
 rm vagrant_${VAGRANT_VERSION}_x86_64.deb
