@@ -2,6 +2,7 @@
   a = add
   ap = add -p
   b = branch
+  br = for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:yellow)%(refname:short)  %(color:bold green)%(committerdate:relative)  %(color:blue)%(subject)  %(color:magenta)%(authorname)%(color:reset)'
   ch = checkout
   c = commit
   cm = commit -m
