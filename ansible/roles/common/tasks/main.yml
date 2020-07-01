@@ -3,3 +3,4 @@
 - include: fzf.yml
 - include: git.yml
 - include: node.yml
+- include: z.yml

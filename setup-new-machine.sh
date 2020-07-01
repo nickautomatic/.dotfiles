@@ -54,10 +54,3 @@ if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
 echo;
 echo 'Before installing Vagrant in WSL, make sure it is installed in Windows';
 if prompt "Install Vagrant? [y/n]"; then source setup/vagrant.sh; fi
-
-# Install some helpful tools:
-if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
-  # Install z (rupa/z):
-  source ${SETUP_DIR}/z.sh
-fi;
-
