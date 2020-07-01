@@ -60,9 +60,6 @@ if prompt "Install Vagrant? [y/n]"; then source setup/vagrant.sh; fi
 
 # Install some helpful tools:
 if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
-  # Install fzf (fuzzy finder):
-  source ${SETUP_DIR}/fzf.sh
-
   # Install z (rupa/z):
   source ${SETUP_DIR}/z.sh
 
