@@ -5,3 +5,14 @@
     creates: ~/n
     executable: /bin/bash
     warn: false
+
+- name: Install some npm packages
+  npm:
+    name: "{{ item }}"
+    state: present
+    global: yes
+    executable: ~/n/bin/npm
+  with_items:
+  - diff-so-fancy
+  - ngrok
+  - tldr

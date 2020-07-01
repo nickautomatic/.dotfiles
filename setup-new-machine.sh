@@ -59,16 +59,5 @@ if prompt "Install Vagrant? [y/n]"; then source setup/vagrant.sh; fi
 if prompt "Install some helpful command line tools (fzf, etc)? [y/n]"; then
   # Install z (rupa/z):
   source ${SETUP_DIR}/z.sh
-
-  # Nice git diffs:
-  npm install -g diff-so-fancy 
-  git config --global core.pager "diff-so-fancy | less --tabs=1,5 -R"
-
-  # Simplified man pages:
-  npm install -g tldr
-  tldr --update
-
-  # ngrok - expose localhost to the internet
-  npm install -g ngrok
 fi;
 
