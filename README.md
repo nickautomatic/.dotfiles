@@ -1,6 +1,6 @@
 To use these dotfiles, `git clone` them to your home directory, then run the following command:
 
-    bash ~/.dotfiles/install.sh && source ~/.bashrc
+    bash ~/.dotfiles/bootstrap.sh
 
 To install various optional extra things, you could also run:
 
