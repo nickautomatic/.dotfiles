@@ -15,6 +15,7 @@
     - lynx
     - silversearcher-ag
     - tig
+    - tmux
     - unzip
     - zip
 
