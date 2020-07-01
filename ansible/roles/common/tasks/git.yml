@@ -1,0 +1,12 @@
+- name: Add git core PPA repository
+  become: yes
+  apt_repository:
+    repo: ppa:git-core/ppa
+
+- name: Install latest stable version of git
+  become: yes
+  apt:
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+    pkg: git

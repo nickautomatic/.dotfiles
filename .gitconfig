@@ -7,6 +7,7 @@
   ch = checkout
   c = commit
   cm = commit -m
+  co = checkout
   cv = commit -v
   d = diff
   ds = diff --staged

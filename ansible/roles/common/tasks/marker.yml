@@ -1,0 +1,5 @@
+- name: Install marker
+  shell: git clone --depth=1 https://github.com/pindexis/marker ~/.marker && ~/.marker/install.py
+  args:
+    creates: ~/.marker
+    executable: /bin/bash

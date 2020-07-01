@@ -1,0 +1,31 @@
+- name: Update apt packages
+  become: yes
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install a few tools
+  become: yes
+  apt:
+    state: latest
+    pkg:
+    - build-essential
+    - htop
+    - httpie
+    - lynx
+    - silversearcher-ag
+    - tig
+    - tmux
+    - unzip
+    - zip
+
+- name: Install a few more tools
+  become: yes
+  apt:
+    state: latest
+    pkg:
+    - fd-find
+    - ripgrep
+  when:
+  - ansible_facts['distribution'] == "Ubuntu"
+  - ansible_facts['distribution_major_version'] >= "20"

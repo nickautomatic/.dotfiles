@@ -6,6 +6,9 @@ source ~/.dotfiles/.bash_profile
 source ~/.dotfiles/.bash_prompt
 source ~/.dotfiles/.bashrc
 
+# if z is installed:
+[ -r ~/bin/z.sh ] && source ~/bin/z.sh
+
 # .extra is an optional .gitignored file for local settings:
 [ -r ~/.dotfiles/.extra ] && source ~/.dotfiles/.extra
 

@@ -1,0 +1,19 @@
+---
+- name: Install n (Node.js version management) with latest version of Node
+  shell: curl -L https://git.io/n-install | PATH=/bin:/usr/bin bash -s -- -y lts
+  args:
+    creates: ~/n
+    executable: /bin/bash
+    warn: false
+
+- name: Install some npm packages
+  npm:
+    name: "{{ item }}"
+    state: present
+    global: yes
+    executable: ~/n/bin/npm
+  with_items:
+  - diff-so-fancy
+  - ngrok
+  - tldr
+  - yarn
