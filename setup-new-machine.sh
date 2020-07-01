@@ -22,9 +22,6 @@ prompt () {
   done
 }
 
-# Install Git:
-if prompt "Install Git? [y/n]"; then source ${SETUP_DIR}/git.sh; fi
-
 # Install Ruby:
 if prompt "Install Ruby? [y/n]"; then
   source ${SETUP_DIR}/ruby.sh; # ruby itself
