@@ -13,6 +13,7 @@
     - htop
     - httpie
     - lynx
+    - silversearcher-ag
     - tig
     - unzip
     - zip
