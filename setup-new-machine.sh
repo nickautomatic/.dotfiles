@@ -28,9 +28,6 @@ if prompt "Install Ruby? [y/n]"; then
   source ${SETUP_DIR}/gem.sh;  # some gems
 fi
 
-# Install Yarn:
-if prompt "Install Yarn? [y/n]"; then source ${SETUP_DIR}/yarn.sh; fi
-
 # Install MySQL:
 if prompt "Install MySQL? [y/n]"; then source ${SETUP_DIR}/mysql.sh; fi
 
