@@ -7,3 +7,11 @@ if [[ ! -x `which rg` ]]; then
 fi
 
 export PATH="$N_PREFIX/bin:$PATH"
+
+# Marker:
+if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
+  export MARKER_KEY_GET="\C-x"
+  source "$HOME/.local/share/marker/marker.sh"
+  bind -x '"\emg1":"_marker_get"'
+  bind '"'"${MARKER_KEY_GET:-\C-X}"'":"\emg1"'
+fi
