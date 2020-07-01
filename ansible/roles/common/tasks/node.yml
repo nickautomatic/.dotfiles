@@ -1,0 +1,7 @@
+---
+- name: Install n (Node.js version management) with latest version of Node
+  shell: curl -L https://git.io/n-install | PATH=/bin:/usr/bin bash -s -- -y lts
+  args:
+    creates: ~/n
+    executable: /bin/bash
+    warn: false

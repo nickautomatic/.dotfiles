@@ -2,3 +2,4 @@
 - include: apt.yml
 - include: fzf.yml
 - include: git.yml
+- include: node.yml

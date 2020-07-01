@@ -5,3 +5,5 @@ export HISTCONTROL=ignoreboth
 if [[ ! -x `which rg` ]]; then
   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 fi
+
+export PATH="$N_PREFIX/bin:$PATH"

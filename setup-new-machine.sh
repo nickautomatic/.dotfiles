@@ -28,9 +28,6 @@ if prompt "Install Ruby? [y/n]"; then
   source ${SETUP_DIR}/gem.sh;  # some gems
 fi
 
-# Install Node:
-if prompt "Install Node? [y/n]"; then source ${SETUP_DIR}/node.sh; fi
-
 # Install Yarn:
 if prompt "Install Yarn? [y/n]"; then source ${SETUP_DIR}/yarn.sh; fi
 
