@@ -1,5 +1,6 @@
 #!/bin/bash
-# This script will set up a new system, installing a bunch of useful tools
+# This script will install miscellaneous extra tools
+# (All essentials are installed via bootstrap.sh)
 # It only needs to be run once (and, depending on your needs, possibly not
 # even once). You'll probably need to `sudo` it: ie. `sudo bash setup.sh`
 #

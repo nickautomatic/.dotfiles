@@ -2,7 +2,8 @@ To use these dotfiles, `git clone` them to your home directory, then run the fol
 
     bash ~/.dotfiles/install.sh && source ~/.bashrc
 
-To set up a new machine (ie. install all the necessary bits and pieces), run the following command:
+To install various optional extra things, you could also run:
 
-    source setup-new-machine.sh
+    source setup-extras.sh
 
+...but that's definitely not essential.
