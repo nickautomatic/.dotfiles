@@ -1,6 +1,6 @@
 # Include dotfiles from ~/.bashrc:
-if ! grep -Fq 'source ~/.dotfiles/base.sh' ~/.bashrc; then
-  echo 'source ~/.dotfiles/base.sh' >> ~/.bashrc
+if ! grep -Fq 'source ~/.dotfiles/.bashrc' ~/.bashrc; then
+  echo 'source ~/.dotfiles/.bashrc' >> ~/.bashrc
 fi;
 
 # Include dotfiles .gitconfig:

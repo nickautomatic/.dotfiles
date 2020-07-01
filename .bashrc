@@ -2,16 +2,43 @@ export HISTSIZE=5000
 export HISTFILESIZE=5000
 export HISTCONTROL=ignoreboth
 
+# Load other dotfiles:
+source ~/.dotfiles/completion/git-completion.bash
+source ~/.dotfiles/completion/git-prompt.sh
+source ~/.dotfiles/.aliases
+source ~/.dotfiles/.bash_profile
+source ~/.dotfiles/.bash_prompt
+
+# .extra is an optional .gitignored file for local settings:
+[ -r ~/.dotfiles/.extra ] && source ~/.dotfiles/.extra
+
+# Like .extra, private local scripts can go in .dotfiles/private:
+if test -e `echo "~/.dotfiles/private/*.sh" | cut -d' ' -f1`
+then
+  for file in ~/.dotfiles/private/*.sh
+  do
+    source $file
+  done
+fi
+
+# z
+[ -r ~/bin/z.sh ] && source ~/bin/z.sh
+
+# fzf
 if [[ ! -x `which rg` ]]; then
   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 fi
 
+# n
 export PATH="$N_PREFIX/bin:$PATH"
 
-# Marker:
+# Marker
 if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
   export MARKER_KEY_GET="\C-x"
   source "$HOME/.local/share/marker/marker.sh"
   bind -x '"\emg1":"_marker_get"'
   bind '"'"${MARKER_KEY_GET:-\C-X}"'":"\emg1"'
 fi
+
+# Launch SSH agent:
+source ~/.dotfiles/scripts/ssh.sh
