@@ -1,0 +1,10 @@
+- name: Symlink various dotfiles from home directory
+  file:
+    src: "~/.dotfiles/{{ item }}"
+    dest: "~/{{ item }}"
+    state: link
+  with_items:
+  - .gemrc
+  - .tigrc
+  - .tmux.conf
+  - .vimrc

@@ -4,4 +4,5 @@
 - include: git.yml
 - include: marker.yml
 - include: node.yml
+- include: symlinks.yml
 - include: z.yml
