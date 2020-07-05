@@ -25,11 +25,13 @@ fi
 [ -r ~/bin/z.sh ] && source ~/bin/z.sh
 
 # fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if [[ ! -x `which rg` ]]; then
   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 fi
 
 # n
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 export PATH="$N_PREFIX/bin:$PATH"
 
 # Marker
