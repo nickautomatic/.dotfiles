@@ -1,2 +1,3 @@
 set main-view = line-number:no,interval=5 id:yes date:default author:width=30 commit-title:yes,graph,refs,overflow=no
+set ignore-space = all
 
