@@ -1,5 +1,6 @@
 - name: Install asdf-vm
-  shell: git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v{{ asdf_version }}
-  args:
-    creates: ~/.asdf
-    executable: /bin/bash
+  git:
+    repo: https://github.com/asdf-vm/asdf.git
+    depth: 1
+    dest: ~/.asdf
+    version: v{{ asdf_version }}
