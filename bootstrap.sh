@@ -16,9 +16,16 @@ if [[ ! -x `which ansible` ]]; then
   sudo apt install --yes ansible
 fi
 
+# (Optionally) allow only tagged tasks to be run:
+tags="$1"
+
+if [ -z $tags ]; then
+  tags="all"
+fi
+
 if [[ -x `which ansible` ]]; then
   echo "Ansible is available"
-  ansible-playbook -K -i ansible/hosts ansible/playbook.yml
+  ansible-playbook -K -i ansible/hosts ansible/playbook.yml --tags $tags
 fi
 
 source ~/.bashrc
