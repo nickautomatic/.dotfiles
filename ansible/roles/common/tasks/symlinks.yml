@@ -5,6 +5,8 @@
     state: link
   with_items:
   - .gemrc
+  - .gitignore_global
   - .tigrc
   - .tmux.conf
   - .vimrc
+  tags: [ symlinks ]
