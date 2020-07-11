@@ -1,0 +1,7 @@
+- name: Install Python
+  become: yes
+  apt:
+    state: latest
+    pkg:
+    - python
+  tags: [ python ]
