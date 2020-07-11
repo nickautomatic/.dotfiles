@@ -1,3 +1,4 @@
 ---
 - include: asdf.yml
 - include: python.yml
+- include: redis.yml

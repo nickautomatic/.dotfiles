@@ -1,0 +1,7 @@
+- name: Install Redis
+  become: yes
+  apt:
+    state: latest
+    pkg:
+    - redis-server
+  tags: [ redis ]
