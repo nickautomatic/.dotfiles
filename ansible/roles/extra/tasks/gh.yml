@@ -1,0 +1,6 @@
+- name: Install gh (Github tool)
+  become: yes
+  apt:
+    deb: https://github.com/cli/cli/releases/download/v{{ gh_version }}/gh_{{ gh_version }}_linux_amd64.deb
+    state: present
+  tags: [ gh ]
