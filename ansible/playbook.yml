@@ -2,5 +2,8 @@
 - hosts: localhost
   roles:
     - role: common
+      tags: [ common ]
+    - role: extra
+      tags: [ extra ]
   vars:
     - home: "{{ ansible_env['HOME'] }}"

@@ -20,7 +20,7 @@ fi
 tags="$1"
 
 if [ -z $tags ]; then
-  tags="all"
+  tags="common"
 fi
 
 if [[ -x `which ansible` ]]; then
