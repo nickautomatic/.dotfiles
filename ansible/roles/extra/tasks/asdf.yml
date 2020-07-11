@@ -4,3 +4,4 @@
     depth: 1
     dest: ~/.asdf
     version: v{{ asdf_version }}
+  tags: [ asdf ]
