@@ -1,7 +1,3 @@
-# Install Ruby:
-sudo apt-add-repository ppa:brightbox/ruby-ng
-sudo apt-get update
-
 # Ruby dependencies:
 sudo apt-get install -y libssl-dev
 sudo apt-get install -y libreadline-dev
