@@ -16,6 +16,7 @@
     executable: ~/n/bin/npm
   with_items:
   - diff-so-fancy
+  - serve
   - ngrok
   - tldr
   - yarn
