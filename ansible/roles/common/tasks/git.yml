@@ -1,9 +1,11 @@
 - name: Add git core PPA repository
+  tags: [ git ]
   become: yes
   apt_repository:
     repo: ppa:git-core/ppa
 
 - name: Install latest stable version of git
+  tags: [ git ]
   become: yes
   apt:
     state: latest

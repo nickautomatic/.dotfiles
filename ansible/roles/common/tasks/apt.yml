@@ -1,4 +1,5 @@
 - name: Update apt packages
+  tags: [ apt ]
   become: yes
   apt:
     update_cache: yes
@@ -20,6 +21,7 @@
     - zip
 
 - name: Install a few more tools
+  tags: [ apt ]
   become: yes
   apt:
     state: latest

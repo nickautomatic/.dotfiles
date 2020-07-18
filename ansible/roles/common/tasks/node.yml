@@ -1,5 +1,6 @@
 ---
 - name: Install n (Node.js version management) with latest version of Node
+  tags: [ node ]
   shell: curl -L https://git.io/n-install | PATH=/bin:/usr/bin bash -s -- -y lts
   args:
     creates: ~/n
@@ -7,6 +8,7 @@
     warn: false
 
 - name: Install some npm packages
+  tags: [ node, npm ]
   npm:
     name: "{{ item }}"
     state: present

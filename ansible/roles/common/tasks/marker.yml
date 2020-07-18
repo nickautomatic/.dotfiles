@@ -1,4 +1,5 @@
 - name: Install marker
+  tags: [ marker ]
   shell: git clone --depth=1 https://github.com/pindexis/marker ~/.marker && ~/.marker/install.py
   args:
     creates: ~/.marker

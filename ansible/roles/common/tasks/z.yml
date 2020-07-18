@@ -1,9 +1,11 @@
 - name: Create ~/bin directory if it doesn't exist
+  tags: [ z ]
   file:
     path: ~/bin
     state: directory
 
 - name: Install z
+  tags: [ z ]
   get_url:
     url: https://raw.githubusercontent.com/rupa/z/master/z.sh
     dest: ~/bin/z.sh

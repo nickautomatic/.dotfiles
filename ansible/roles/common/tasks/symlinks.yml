@@ -1,4 +1,5 @@
 - name: Symlink various dotfiles from home directory
+  tags: [ symlinks ]
   file:
     src: "~/.dotfiles/{{ item }}"
     dest: "~/{{ item }}"
@@ -10,4 +11,3 @@
   - .tigrc
   - .tmux.conf
   - .vimrc
-  tags: [ symlinks ]
