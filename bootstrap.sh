@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 # Include dotfiles from ~/.bashrc:
