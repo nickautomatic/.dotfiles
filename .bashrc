@@ -2,9 +2,12 @@ export HISTSIZE=5000
 export HISTFILESIZE=5000
 export HISTCONTROL=ignoreboth
 
+# Git completions / prompt:
+GIT_COMPLETIONS=/usr/share/bash-completion/completions/git
+[ -r $GIT_COMPLETIONS ] && source $GIT_COMPLETIONS
+source ~/.dotfiles/scripts/git-prompt.sh
+
 # Load other dotfiles:
-source ~/.dotfiles/completion/git-completion.bash
-source ~/.dotfiles/completion/git-prompt.sh
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.bash_profile
 source ~/.dotfiles/.bash_prompt
