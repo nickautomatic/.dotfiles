@@ -14,6 +14,7 @@
     - htop
     - httpie
     - lynx
+    - ncdu
     - silversearcher-ag
     - tig
     - tmux
