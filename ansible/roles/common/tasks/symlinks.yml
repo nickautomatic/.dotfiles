@@ -6,6 +6,7 @@
     state: link
   with_items:
   - .asdfrc
+  - .editorconfig
   - .gemrc
   - .gitignore_global
   - .tigrc
