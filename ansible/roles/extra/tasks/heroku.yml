@@ -1,0 +1,8 @@
+- name: Install Heroku
+  tags: [ heroku ]
+  become: yes
+  shell: curl https://cli-assets.heroku.com/install.sh | sh
+  args:
+    creates: /usr/local/lib/heroku
+    executable: /bin/bash
+    warn: false

@@ -1,6 +1,7 @@
 ---
 - include: asdf.yml
 - include: gh.yml
+- include: heroku.yml
 - include: python.yml
 - include: redis.yml
 - include: ruby.yml
