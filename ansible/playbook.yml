@@ -9,3 +9,5 @@
     - home: "{{ ansible_env['HOME'] }}"
     - asdf_version: 0.7.8
     - gh_version: 0.11.0
+    - rubocop_version: 0.23.0
+    - ruby_version: 2.6.2

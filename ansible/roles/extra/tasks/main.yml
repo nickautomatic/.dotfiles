@@ -3,3 +3,4 @@
 - include: gh.yml
 - include: python.yml
 - include: redis.yml
+- include: ruby.yml
