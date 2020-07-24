@@ -21,6 +21,8 @@
   sh = show
   st = status
   wip = "!git add . && git commit --no-verify -m 'WIP'"
+[blame]
+  ignoreRevsFile = .git-blame-ignore-revs
 [commit]
   verbose = true
 [core]
