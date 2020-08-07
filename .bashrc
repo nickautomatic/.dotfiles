@@ -1,3 +1,4 @@
+export BROWSER='/mnt/c/Windows/explorer.exe'
 export HISTSIZE=5000
 export HISTFILESIZE=5000
 export HISTCONTROL=ignoreboth
