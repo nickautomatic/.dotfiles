@@ -20,6 +20,7 @@
   s = status
   sh = show
   st = status
+  sw = switch
   wip = "!git add . && git commit --no-verify -m 'WIP'"
 [blame]
   ignoreRevsFile = .git-blame-ignore-revs
