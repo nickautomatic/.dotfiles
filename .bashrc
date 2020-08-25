@@ -36,7 +36,7 @@ fi
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-if [[ ! -x `which rg` ]]; then
+if [[ -x `which rg` ]]; then
   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 fi
 
