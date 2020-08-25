@@ -37,7 +37,7 @@ fi
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if [[ -x `which rg` ]]; then
-  export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+  export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!{node_modules,.git}'"
 fi
 
 # n
