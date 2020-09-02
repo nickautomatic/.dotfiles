@@ -14,6 +14,7 @@
   f = fetch --all
   l = log -n 15 --graph --date-order --date=relative --pretty='format:%C(red)%h%C(reset)%C(auto)%d%C(reset) %s %C(green)(%cr) %C(yellow) %an %C(reset)'
   m = merge
+  oops = commit --amend --no-edit
   rb = rebase
   rbi = rebase -i
   rs = reset
