@@ -39,7 +39,6 @@ if prompt "Install Redis? [y/n]"; then source ${SETUP_DIR}/redis.sh; fi
 if prompt "Install Elasticsearch? [y/n]"; then source ${SETUP_DIR}/elasticsearch.sh; fi
 
 # Install PHP:
-if prompt "Install PHP? [y/n]"; then source ${SETUP_DIR}/php.sh; fi
 if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
 
 # Install Vagrant:

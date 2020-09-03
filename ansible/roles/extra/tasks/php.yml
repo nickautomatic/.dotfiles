@@ -1,0 +1,24 @@
+- name: Add PHP PPA repository
+  tags: [ php ]
+  become: yes
+  apt_repository:
+    repo: ppa:ondrej/php
+
+- name: Install PHP
+  # (with PHP extensions required by Craft CMS)
+  tags: [ php ]
+  become: yes
+  apt:
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+    pkg:
+    - imagemagick
+    - php-imagick
+    - php{{ php_version }}
+    - php{{ php_version }}-curl
+    - php{{ php_version }}-intl
+    - php{{ php_version }}-mbstring
+    - php{{ php_version }}-mysql
+    - php{{ php_version }}-xml
+    - php{{ php_version }}-zip
