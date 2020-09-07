@@ -11,12 +11,13 @@
   tags: [ node, npm ]
   npm:
     name: "{{ item }}"
-    state: present
+    state: latest
     global: yes
     executable: ~/n/bin/npm
   with_items:
   - diff-so-fancy
   - serve
   - ngrok
+  - npm
   - tldr
   - yarn
