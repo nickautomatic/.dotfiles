@@ -12,3 +12,4 @@
     - php_version: 7.4
     - rubocop_version: 0.23.0
     - ruby_version: 2.6.2
+    - vagrant_version: 2.2.10

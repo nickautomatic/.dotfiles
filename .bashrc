@@ -43,5 +43,9 @@ if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
   bind '"'"${MARKER_KEY_GET:-\C-X}"'":"\emg1"'
 fi
 
+# Vagrant
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+
 # Launch SSH agent:
 source ~/.dotfiles/scripts/ssh.sh

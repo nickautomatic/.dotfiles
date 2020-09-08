@@ -1,0 +1,18 @@
+- name: Ensure Vagrant is installed in Windows
+  command: which vagrant.exe
+  tags: [ vagrant ]
+  register: result
+
+- name: Warn if Vagrant is not installed in Windows
+  debug:
+    msg: 'Make sure Vagrant is installed in Windows before installing on WSL'
+  when: result.stdout == ''
+  tags: [ vagrant ]
+
+- name: Install Vagrant
+  become: yes
+  apt:
+    deb: https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb
+    state: present
+  when: result.stdout != ''
+  tags: [ vagrant ]
