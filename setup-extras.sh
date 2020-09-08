@@ -38,9 +38,6 @@ if prompt "Install Redis? [y/n]"; then source ${SETUP_DIR}/redis.sh; fi
 # Install Elasticsearch:
 if prompt "Install Elasticsearch? [y/n]"; then source ${SETUP_DIR}/elasticsearch.sh; fi
 
-# Install PHP:
-if prompt "Install Composer? [y/n]"; then source ${SETUP_DIR}/composer.sh; fi
-
 # Install Vagrant:
 echo;
 echo 'Before installing Vagrant in WSL, make sure it is installed in Windows';

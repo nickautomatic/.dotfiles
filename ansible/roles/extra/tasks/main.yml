@@ -1,5 +1,6 @@
 ---
 - include: asdf.yml
+- include: composer.yml
 - include: gh.yml
 - include: heroku.yml
 - include: php.yml
