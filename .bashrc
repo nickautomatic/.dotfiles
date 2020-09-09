@@ -1,7 +1,7 @@
 export BROWSER='/mnt/c/Windows/explorer.exe'
 export HISTSIZE=5000
 export HISTFILESIZE=5000
-export HISTCONTROL=ignoreboth
+export HISTCONTROL="erasedups:ignoreboth"
 
 # Git completions / prompt:
 GIT_COMPLETIONS=/usr/share/bash-completion/completions/git
@@ -10,7 +10,6 @@ source ~/.dotfiles/scripts/git-prompt.sh
 
 # Load other dotfiles:
 source ~/.dotfiles/.aliases
-source ~/.dotfiles/.bash_profile
 source ~/.dotfiles/.bash_prompt
 
 # .extra is an optional .gitignored file for local settings:
