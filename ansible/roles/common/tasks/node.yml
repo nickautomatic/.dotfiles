@@ -7,6 +7,10 @@
     executable: /bin/bash
     warn: false
 
+- name: Update n to latest version
+  tags: [ node ]
+  command: n-update -y
+
 - name: Install some npm packages
   tags: [ node, npm ]
   npm:
