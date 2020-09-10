@@ -8,6 +8,7 @@
   c = commit
   cm = commit -m
   co = checkout
+  contributors = shortlog --summary --numbered
   cv = commit -v
   d = diff
   ds = diff --staged
