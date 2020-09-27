@@ -1,6 +1,6 @@
 [alias]
   a = add
-  alias = "!git config --get-regexp ^alias. | cut -c7-"
+  alias = "!f() { git config --get-regexp ^alias. | cut -c7- | grep -E \"${1}\" --color=always | sed 's/ /\t/'; }; f"
   amend = commit --amend
   ap = add -p
   b = branch
