@@ -1,5 +1,6 @@
 [alias]
   a = add
+  alias = "!git config --get-regexp ^alias. | cut -c7-"
   amend = commit --amend
   ap = add -p
   b = branch
