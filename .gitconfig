@@ -23,6 +23,7 @@
   rs = reset
   s = status
   sh = show
+  shs = show --stat
   st = status
   sw = switch
   wip = "!git add . && git commit --no-verify -m 'WIP'"
