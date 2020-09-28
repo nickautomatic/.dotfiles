@@ -9,6 +9,7 @@
   c = commit
   cm = commit -m
   co = checkout
+  coi = "!git br | fzf --ansi | awk '{ print $1; }' | sed 's/*//' | xargs git checkout"
   contributors = shortlog --summary --numbered
   cv = commit -v
   d = diff
