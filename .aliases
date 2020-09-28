@@ -1,7 +1,7 @@
 ## Git
 alias ga='git add'
 alias gb='git branch --sort=-committerdate'
-alias gbr="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)'|column -ts'|'"
+alias gbr="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'"
 alias gco='git checkout'
 alias gcoi="gbr | fzf --ansi | awk '{print \$1;}' | sed -r 's/\*//g' | xargs git checkout"
 alias gcm='git commit -m'
