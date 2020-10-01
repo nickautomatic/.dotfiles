@@ -20,11 +20,20 @@ COLOR_WHITE='\[\e[97m\]'
 # Git PS1 settings:
 GIT_PS1_SHOWDIRTYSTATE=1
 
+# git mob
+function __git_mob_initials {
+  local initials=$(git mob-print --initials)
+  if [[ -n "${initials}" ]]; then
+    echo "[${initials}]"
+  fi
+}
+
 # Prompt
 _SET_WINDOW_TITLE='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]'
 _TIME="${COLOR_GREEN}\t"
 _PATH="${COLOR_YELLOW}\w"
 _GIT_INFO="${COLOR_CYAN}\$(__git_ps1)"
+_GIT_MOB="${COLOR_MAGENTA}\$(__git_mob_initials)"
 _PROMPT="${COLOR_RESET}$ "
 
-export PS1="${_SET_WINDOW_TITLE}\n${_TIME} ${_PATH}${_GIT_INFO}\n${_PROMPT}"
+export PS1="${_SET_WINDOW_TITLE}\n${_TIME} ${_PATH}${_GIT_INFO} ${_GIT_MOB}\n${_PROMPT}"
