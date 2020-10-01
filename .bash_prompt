@@ -22,9 +22,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 
 # Prompt
 _SET_WINDOW_TITLE='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]'
-_USER="${COLOR_GREEN}\u@\h"
+_TIME="${COLOR_GREEN}\t"
 _PATH="${COLOR_YELLOW}\w"
 _GIT_INFO="${COLOR_CYAN}\$(__git_ps1)"
 _PROMPT="${COLOR_RESET}$ "
 
-export PS1="${_SET_WINDOW_TITLE}\n${_USER} ${_PATH}${_GIT_INFO}\n${_PROMPT}"
+export PS1="${_SET_WINDOW_TITLE}\n${_TIME} ${_PATH}${_GIT_INFO}\n${_PROMPT}"
