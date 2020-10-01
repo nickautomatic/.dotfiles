@@ -1,2 +1,30 @@
-## Custom Bash Prompt:
-export PS1='\[\033]0;$MSYSTEM:${PWD//[^[:ascii:]]/?}\007\]\n\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+# Colors
+COLOR_DEFAULT='\[\e[39m\]'
+COLOR_RESET='\[\e[0m\]'
+COLOR_RED='\[\e[31m\]'
+COLOR_GREEN='\[\e[32m\]'
+COLOR_YELLOW='\[\e[33m\]'
+COLOR_BLUE='\[\e[34m\]'
+COLOR_MAGENTA='\[\e[35m\]'
+COLOR_CYAN='\[\e[36m\]'
+COLOR_GRAY='\[\e[90m\]'
+COLOR_LIGHT_RED='\[\e[91m\]'
+COLOR_LIGHT_GREEN='\[\e[92m\]'
+COLOR_LIGHT_YELLOW='\[\e[93m\]'
+COLOR_LIGHT_BLUE='\[\e[94m\]'
+COLOR_LIGHT_MAGENTA='\[\e[95m\]'
+COLOR_LIGHT_CYAN='\[\e[96m\]'
+COLOR_LIGHT_GRAY='\[\e[37m\]'
+COLOR_WHITE='\[\e[97m\]'
+
+# Git PS1 settings:
+GIT_PS1_SHOWDIRTYSTATE=1
+
+# Prompt
+_SET_WINDOW_TITLE='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]'
+_USER="${COLOR_GREEN}\u@\h"
+_PATH="${COLOR_YELLOW}\w"
+_GIT_INFO="${COLOR_CYAN}\$(__git_ps1)"
+_PROMPT="${COLOR_RESET}$ "
+
+export PS1="${_SET_WINDOW_TITLE}\n${_USER} ${_PATH}${_GIT_INFO}\n${_PROMPT}"
