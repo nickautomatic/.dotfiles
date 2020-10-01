@@ -17,6 +17,9 @@ COLOR_LIGHT_CYAN='\[\e[96m\]'
 COLOR_LIGHT_GRAY='\[\e[37m\]'
 COLOR_WHITE='\[\e[97m\]'
 
+# Git PS1 settings:
+GIT_PS1_SHOWDIRTYSTATE=1
+
 # Prompt
 _SET_WINDOW_TITLE='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]'
 _USER="${COLOR_GREEN}\u@\h"
