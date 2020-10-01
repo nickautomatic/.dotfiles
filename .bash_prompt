@@ -18,6 +18,10 @@ COLOR_LIGHT_GRAY='\[\e[37m\]'
 COLOR_WHITE='\[\e[97m\]'
 
 # Prompt
-SET_WINDOW_TITLE='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]'
+_SET_WINDOW_TITLE='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]'
+_USER="${COLOR_GREEN}\u@\h"
+_PATH="${COLOR_YELLOW}\w"
+_GIT_INFO="${COLOR_CYAN}\$(__git_ps1)"
+_PROMPT="${COLOR_RESET}$ "
 
-export PS1="${SET_WINDOW_TITLE}\n${COLOR_GREEN}\u@\h ${COLOR_YELLOW}\w${COLOR_CYAN}\$(__git_ps1)${COLOR_RESET}\n$ "
+export PS1="${_SET_WINDOW_TITLE}\n${_USER} ${_PATH}${_GIT_INFO}\n${_PROMPT}"
