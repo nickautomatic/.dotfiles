@@ -15,6 +15,7 @@
   d = diff
   ds = diff --staged
   f = fetch --all
+  fixup = "!git log --oneline | fzf --ansi | awk '{ print $1 }' | xargs git commit --fixup"
   l = log -n 15 --graph --date-order --date=relative --pretty='format:%C(red)%h%C(reset)%C(auto)%d%C(reset) %s %C(green)(%cr) %C(yellow) %an %C(reset)'
   m = merge
   oops = commit --amend --no-edit
@@ -24,6 +25,7 @@
   s = status
   sh = show
   shs = show --stat
+  squash = "!git log --oneline | fzf --ansi | awk '{ print $1 }' | xargs -o git commit --squash"
   st = status
   sw = switch
   wip = "!git add . && git commit --no-verify -m 'WIP'"
