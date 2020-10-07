@@ -21,9 +21,6 @@ if [[ -s "$HOME/.asdf/asdf.sh" ]]; then
   source "$HOME/.asdf/completions/asdf.bash"
 fi
 
-# z
-[ -r ~/bin/z.sh ] && source ~/bin/z.sh
-
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if [[ -x `which rg` ]]; then
@@ -45,6 +42,16 @@ fi
 # Vagrant
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+
+# z
+[ -r ~/bin/z.sh ] && source ~/bin/z.sh
+
+# Allow z to use fzf when called without arguments:
+unalias z 2> /dev/null
+z() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
 
 # Launch SSH agent:
 source ~/.dotfiles/scripts/ssh.sh
