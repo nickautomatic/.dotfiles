@@ -21,6 +21,7 @@ alias gwip='git add . && git commit -m "WIP" --no-verify'
 
 ## Vagrant
 alias v='vagrant'
+alias vagrant='cmd.exe /c vagrant'
 
 ## Ruby
 alias be="bundle exec"
