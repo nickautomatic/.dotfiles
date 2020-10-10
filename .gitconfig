@@ -11,6 +11,7 @@
   co = checkout
   coi = "!git br | fzf --ansi | awk '{ print $1; }' | sed 's/*//' | xargs git checkout"
   contributors = shortlog --summary --numbered
+  cp = cherry-pick
   cv = commit -v
   d = diff
   ds = diff --staged
