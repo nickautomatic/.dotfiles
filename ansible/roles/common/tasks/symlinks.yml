@@ -8,6 +8,7 @@
   - .asdfrc
   - .editorconfig
   - .gemrc
+  - .gitattributes
   - .gitignore_global
   - .tigrc
   - .tmux.conf
