@@ -12,3 +12,11 @@
     update_cache: yes
     cache_valid_time: 3600
     pkg: git
+
+- name: Use dotfiles .gitconfig
+  tags: [ git ]
+  git_config:
+    name: include.path
+    scope: global
+    value: "{{ home }}/.dotfiles/.gitconfig"
+    state: present
