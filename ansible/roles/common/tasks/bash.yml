@@ -1,0 +1,6 @@
+- name: Include dotfiles from ~/.bashrc
+  tags: [ bash ]
+  lineinfile:
+    path: "{{ home }}/.bashrc"
+    line: 'source ~/.dotfiles/.bashrc'
+    state: present

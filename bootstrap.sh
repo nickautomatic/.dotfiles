@@ -2,11 +2,6 @@
 
 set -e
 
-# Include dotfiles from ~/.bashrc:
-if ! grep -Fq 'source ~/.dotfiles/.bashrc' ~/.bashrc; then
-  echo 'source ~/.dotfiles/.bashrc' >> ~/.bashrc
-fi;
-
 # Install Ansible (on first run):
 if [[ ! -x `which ansible` ]]; then
   echo "Installing Ansible"
