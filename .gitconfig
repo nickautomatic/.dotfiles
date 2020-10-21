@@ -21,6 +21,8 @@
   m = merge
   oops = commit --amend --no-edit
   rb = rebase
+  rba = rebase --abort
+  rbc = rebase --continue
   rbi = rebase -i
   rs = reset
   s = status
