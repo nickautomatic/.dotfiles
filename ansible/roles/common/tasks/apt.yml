@@ -6,6 +6,7 @@
     cache_valid_time: 3600
 
 - name: Install a few tools
+  tags: [ apt ]
   become: yes
   apt:
     state: latest
@@ -15,6 +16,7 @@
     - httpie
     - lynx
     - ncdu
+    - pv
     - silversearcher-ag
     - tig
     - tmux
