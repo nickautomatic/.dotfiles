@@ -22,6 +22,7 @@
     - tig
     - unzip
     - zip
+  register: apt
 
 - name: Install a few more tools
   tags: [ apt ]
@@ -32,6 +33,22 @@
     - bat
     - fd-find
     - ripgrep
+  register: apt2
   when:
   - ansible_facts['distribution'] == "Ubuntu"
   - ansible_facts['distribution_major_version'] >= "20"
+
+#---
+# Reporting:
+#---
+- name: Identify installed and upgraded packages
+  tags: [ apt ]
+  shell: grep -E "^$(date +%Y-%m-%d).+ (install|upgrade) " /var/log/dpkg.log |cut -d " " -f 3-6
+  register: result
+  when: apt.changed or apt2.changed
+
+- name: Show installed and upgraded packages
+  tags: [ apt ]
+  debug:
+    msg: "{{ result.stdout_lines }}"
+  when: apt.changed or apt2.changed
