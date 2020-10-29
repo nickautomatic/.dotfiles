@@ -37,9 +37,3 @@ The bootstrap script runs the "common" tasks by default, but can also accept a c
 Behind the scenes, `bootstrap.sh` uses **Ansible** to manage the changes it makes. The reason for this (and why it's preferable to, say, bash scripts) is that it's *idempotent*: ie. it can safely be run multiple times without changing the outcome.
 
 The Ansible tasks are essentially declarative: they describe a state that the system should be in after they're run. If the system is *already* in this state (eg. if a tool is already installed, or a file already exists), they will do nothing. This makes it reasonably fast and safe to re-run all tasks if needed.
-
-## Setup scripts
-
-The `/setup` folder contains a few legacy bash scripts that can be run individually if needed.
-
-Before I started using Ansible, all my setup scripts were here. Most of them have now been converted to Ansible tasks, but there are still a few left that I either haven't got around to yet or am just keeping for for reference. I rarely or never run these nowadays.
