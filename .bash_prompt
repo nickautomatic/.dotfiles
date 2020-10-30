@@ -22,6 +22,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 
 # git mob
 function __git_mob_initials {
+  [ ! -f ~/.git-coauthors ] && return 0;
   local initials=$(git mob-print --initials)
   if [[ -n "${initials}" ]]; then
     echo "[${initials}]"
