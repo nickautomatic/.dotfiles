@@ -11,6 +11,10 @@
   tags: [ node ]
   command: n-update -y
 
+- name: Install latest LTS version of Node
+  tags: [ node ]
+  command: n lts
+
 - name: Install some npm packages
   tags: [ node, npm ]
   npm:
