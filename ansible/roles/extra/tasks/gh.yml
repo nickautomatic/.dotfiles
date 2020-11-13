@@ -1,6 +1,14 @@
 - name: Install gh (Github tool)
+  tags: [ gh ]
   become: yes
   apt:
     deb: https://github.com/cli/cli/releases/download/v{{ gh_version }}/gh_{{ gh_version }}_linux_amd64.deb
     state: present
+
+- name: Symlink gh
   tags: [ gh ]
+  become: yes
+  file:
+    src: "/usr/bin/gh"
+    dest: "/usr/local/bin/gh"
+    state: link
