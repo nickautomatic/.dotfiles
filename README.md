@@ -44,6 +44,7 @@ There are a few things here I find particularly useful:
 
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - for nicer git diffs
 * [fzf](https://github.com/junegunn/fzf) - for enhanced bash history search, among other things
+* [tig](https://www.atlassian.com/blog/git/git-tig) - for browsing git history
 * [tldr](https://tldr.sh) - simplified man pages with practical examples of CLI commands
 * [z](https://github.com/rupa/z) - for quickly jumping between recently-used directories
 * The aliases in my [.gitconfig](https://github.com/nickautomatic/.dotfiles/blob/main/.gitconfig) (`git l` and `git br` in particular)
