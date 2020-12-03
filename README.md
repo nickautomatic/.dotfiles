@@ -37,3 +37,13 @@ The bootstrap script runs the "common" tasks by default, but can also accept a c
 Behind the scenes, `bootstrap.sh` uses **Ansible** to manage the changes it makes. The reason for this (and why it's preferable to, say, bash scripts) is that it's *idempotent*: ie. it can safely be run multiple times without changing the outcome.
 
 The Ansible tasks are essentially declarative: they describe a state that the system should be in after they're run. If the system is *already* in this state (eg. if a tool is already installed, or a file already exists), they will do nothing. This makes it reasonably fast and safe to re-run all tasks if needed.
+
+## Highlights
+
+There are a few things here I find particularly useful:
+
+* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - for nicer git diffs
+* [fzf](https://github.com/junegunn/fzf) - for enhanced bash history search, among other things
+* [tldr](https://tldr.sh) - simplified man pages with practical examples of CLI commands
+* [z](https://github.com/rupa/z) - for quickly jumping between recently-used directories
+* The aliases in my [.gitconfig](https://github.com/nickautomatic/.dotfiles/blob/main/.gitconfig) (`git l` and `git br` in particular)
