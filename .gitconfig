@@ -4,12 +4,13 @@
   amend = commit --amend
   ap = add -p
   b = branch
-  br = !git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'
+  branches = "!git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'"
+  br = "!setterm -linewrap off; git branches; setterm -linewrap on;"
   ch = checkout
   c = commit
   cm = commit -m
   co = checkout
-  coi = "!git br | fzf --ansi | awk '{ print $1; }' | sed 's/*//' | xargs git checkout"
+  coi = "!git branches | fzf --ansi | awk '{ print $1; }' | sed 's/*//' | xargs git checkout"
   contributors = shortlog --summary --numbered
   cp = cherry-pick
   cv = commit -v
