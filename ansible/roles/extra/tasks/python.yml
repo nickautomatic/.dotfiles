@@ -4,4 +4,5 @@
     state: latest
     pkg:
     - python
+    - python3-pip
   tags: [ python ]
