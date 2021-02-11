@@ -25,6 +25,7 @@
   rba = rebase --abort
   rbc = rebase --continue
   rbi = rebase -i
+  reuse = commit --reuse-message
   rs = reset
   s = status
   sh = show
