@@ -1,0 +1,5 @@
+- name: Install pre-commit
+  tags: [ pre-commit ]
+  pip:
+    name: pre-commit
+    state: latest

@@ -3,6 +3,7 @@
 - include: gh.yml
 - include: heroku.yml
 - include: php.yml
+- include: pre-commit.yml
 - include: python.yml
 - include: redis.yml
 - include: ruby.yml
