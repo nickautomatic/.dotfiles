@@ -52,3 +52,5 @@
   default = simple
 [rebase]
   autosquash = true
+[stash]
+  showPatch = true
