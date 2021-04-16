@@ -35,8 +35,12 @@
   sw = switch
   upstream = rev-parse --abbrev-ref HEAD@{upstream}
   wip = "!git add . && git commit --no-verify -m 'WIP'"
+[blame]
+  coloring = highlightRecent
 [branch]
   sort = -committerdate
+[color "blame"]
+  highlightRecent = blue,6 month ago,green,1 month ago,brightGreen
 [commit]
   verbose = true
 [core]
