@@ -5,6 +5,8 @@
       tags: [ common ]
     - role: extra
       tags: [ extra ]
+    - role: private
+      tags: [ private ]
   vars:
     - home: "{{ ansible_env['HOME'] }}"
     - asdf_version: 0.8.0
