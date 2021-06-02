@@ -22,10 +22,3 @@
   args:
     creates: ~/.asdf/installs/ruby/{{ ruby_version }}
     executable: /bin/bash
-
-- name: Install Rubocop
-  tags: [ ruby ]
-  gem:
-    name: rubocop
-    version: "{{ rubocop_version }}"
-    state: present
