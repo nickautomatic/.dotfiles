@@ -36,6 +36,9 @@ alias less='less -R'
 alias ll='ls -alFh --color'
 alias x='exit'
 
+## Node.js
+alias caniuse="npx caniuse-cmd"
+
 # Pretty print $PATH
 alias path='echo $PATH | tr -s ":" "\n"'
 
