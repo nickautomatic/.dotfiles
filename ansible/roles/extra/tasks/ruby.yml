@@ -16,6 +16,10 @@
     creates: ~/.asdf/plugins/ruby
     executable: /bin/bash
 
+- name: Update Ruby plugin
+  tags: [ ruby ]
+  shell: ~/.asdf/bin/asdf plugin update ruby
+
 - name: Install Ruby
   tags: [ ruby ]
   shell: ~/.asdf/bin/asdf install ruby {{ ruby_version }} && ~/.asdf/bin/asdf global ruby {{ ruby_version }}
