@@ -19,6 +19,9 @@
 - name: Update Ruby plugin
   tags: [ ruby ]
   shell: ~/.asdf/bin/asdf plugin update ruby
+  register: result
+  changed_when:
+    - '"From https://github.com/asdf-vm/asdf-ruby" in result.stderr'
 
 - name: Install Ruby
   tags: [ ruby ]
