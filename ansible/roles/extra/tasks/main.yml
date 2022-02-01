@@ -1,5 +1,6 @@
 ---
 - include: composer.yml
+- include: cypress.yml
 - include: gh.yml
 - include: heroku.yml
 - include: php.yml
