@@ -1,0 +1,28 @@
+- name: Install Chrome
+  tags: [ chrome ]
+  become: yes
+  apt:
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Check Chrome version
+  command: google-chrome --product-version
+  tags: [ chrome, chromedriver ]
+  register: google_chrome_version
+
+- name: Download Chromedriver
+  tags: [ chrome, chromedriver ]
+  get_url:
+    url: https://chromedriver.storage.googleapis.com/{{ google_chrome_version.stdout }}/chromedriver_linux64.zip
+    dest: /tmp/chromedriver-{{ google_chrome_version.stdout }}_linux64.zip
+  register: download_chromedriver
+
+- name: Install Chromedriver
+  tags: [ chrome, chromedriver ]
+  become: yes
+  unarchive:
+    src: /tmp/chromedriver-{{ google_chrome_version.stdout }}_linux64.zip
+    dest: /usr/bin
+  when: download_chromedriver.changed
