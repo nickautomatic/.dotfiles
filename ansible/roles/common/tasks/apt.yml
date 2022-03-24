@@ -14,6 +14,7 @@
     - build-essential
     - htop
     - httpie
+    - jq
     - lynx
     - ncdu
     - pv
