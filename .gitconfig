@@ -34,6 +34,7 @@
   squash = "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print $1 }' | xargs -o git commit --squash"
   st = status
   sw = switch
+  sync = "!git fetch && git reset --hard @{upstream}"
   upstream = rev-parse --abbrev-ref HEAD@{upstream}
   wip = "!git add . && git commit --no-verify -m 'WIP'"
 [blame]
