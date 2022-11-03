@@ -15,6 +15,10 @@
   tags: [ node ]
   command: n lts
 
+- name: Enable corepack
+  tags: [ node, corepack ]
+  command: corepack enable
+
 - name: Install some npm packages
   tags: [ node, npm ]
   npm:
@@ -26,6 +30,4 @@
   - diff-so-fancy
   - serve
   - ngrok
-  - npm
   - tldr
-  - yarn
