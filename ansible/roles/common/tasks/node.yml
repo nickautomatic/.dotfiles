@@ -2,9 +2,21 @@
 - name: Install n (Node.js version management) with latest version of Node
   tags: [ node ]
   shell: curl -L https://git.io/n-install | PATH=/bin:/usr/bin bash -s -- -y lts
+  register: ninstall
   args:
     creates: ~/n
     executable: /bin/bash
+
+- block:
+  - name: Open a new terminal
+    tags: [ node ]
+    debug:
+      msg: "Installed n. This updates .bashrc, so please open a new terminal before continuing."
+
+  - name: Stop, if necessary
+    tags: [ node ]
+    meta: end_play
+  when: ninstall.rc != 0
 
 - name: Update n to latest version
   tags: [ node ]
