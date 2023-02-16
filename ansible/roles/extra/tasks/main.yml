@@ -4,6 +4,7 @@
 - include: cypress.yml
 - include: gh.yml
 - include: heroku.yml
+- include: marker.yml
 - include: php.yml
 - include: pre-commit.yml
 - include: python.yml
