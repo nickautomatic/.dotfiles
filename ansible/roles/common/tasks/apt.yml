@@ -29,6 +29,7 @@
   apt:
     state: latest
     pkg:
+    - bat
     - fd-find
     - ripgrep
   when:

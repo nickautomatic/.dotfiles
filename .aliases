@@ -31,6 +31,7 @@ alias rs="spring rspec"
 alias rsc="git status | grep _spec | grep modified: | awk '{ print \$2 }' | xargs --no-run-if-empty bundle exec rspec"
 
 ## Bash
+alias bat='batcat'
 alias fd='fdfind'
 alias less='less -R'
 alias ll='ls -alFh --color'
