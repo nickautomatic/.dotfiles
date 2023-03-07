@@ -1,24 +1,3 @@
-## Git
-alias ga='git add'
-alias gb='git branch --sort=-committerdate'
-alias gbr="git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always | column -ts'|'"
-alias gco='git checkout'
-alias gcoi="gbr | fzf --ansi | awk '{print \$1;}' | sed -r 's/\*//g' | xargs git checkout"
-alias gcm='git commit -m'
-alias gcv='git commit -v'
-alias gd='git diff'
-alias gl="git log -n 15 --graph --date-order --date=relative --pretty=format:'%C(red)%h%C(reset)%C(auto)%d%C(reset) %s %C(green)(%cr) %C(yellow) %an %C(reset)'"
-alias gm='git merge'
-alias gpl='git pull'
-alias gps='git push'
-alias gr='git remote'
-alias grb='git rebase'
-alias grs='git reset'
-alias gs='git status'
-alias gsh='git show'
-alias gsw='git switch'
-alias gwip='git add . && git commit -m "WIP" --no-verify'
-
 ## Vagrant
 alias v='vagrant'
 alias vagrant='cmd.exe /c vagrant'
