@@ -11,6 +11,7 @@
   - .gemrc
   - .gitattributes
   - .gitignore_global
+  - .inputrc
   - .terraformrc
   - .tigrc
   - .tmux.conf
