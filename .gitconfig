@@ -21,6 +21,7 @@
   fixup = "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print $1 }' | xargs git commit --fixup"
   l = log -n 15 --graph --date-order --date=relative --pretty='format:%C(red)%h%C(reset)%C(auto)%d%C(reset) %s %C(green)(%cr) %C(yellow) %an %C(reset)'
   m = merge
+  mainormaster = !"git branch --format '%(refname:short)' --sort=-committerdate --list master main | head -n1"
   oops = commit --amend --no-edit
   rb = rebase
   rba = rebase --abort
