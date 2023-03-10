@@ -44,6 +44,9 @@
   sort = -committerdate
 [color "blame"]
   highlightRecent = blue,6 month ago,green,1 month ago,brightGreen
+[color "diff"]
+  newMoved = cyan
+  oldMoved = blue dim
 [commit]
   verbose = true
 [core]
@@ -51,6 +54,8 @@
   editor = vim
   excludesfile = ~/.gitignore_global
   pager = diff-so-fancy | less --tabs=4 -RFX
+[diff]
+  colorMoved = plain
 [help]
   autocorrect = prompt
 [init]
