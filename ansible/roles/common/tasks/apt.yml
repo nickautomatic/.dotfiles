@@ -35,7 +35,7 @@
     - ripgrep
   register: apt2
   when:
-  - ansible_facts['distribution'] == "Ubuntu"
+  - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == 'Pop!_OS'
   - ansible_facts['distribution_major_version'] >= "20"
 
 #---
