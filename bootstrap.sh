@@ -7,6 +7,7 @@ if [[ ! -x `which ansible` ]]; then
   echo "Installing Ansible"
   sudo apt update
   sudo apt install --yes software-properties-common
+  sudo apt install --yes python3-apt
   sudo apt install --yes ansible
 fi
 
