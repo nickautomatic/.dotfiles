@@ -33,6 +33,7 @@
     - bat
     - fd-find
     - ripgrep
+    - vim
   register: apt2
   when:
   - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == 'Pop!_OS'
