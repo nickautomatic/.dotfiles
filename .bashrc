@@ -39,6 +39,9 @@ if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
   bind '"'"${MARKER_KEY_GET:-\C-X}"'":"\emg1"'
 fi
 
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # Vagrant
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
