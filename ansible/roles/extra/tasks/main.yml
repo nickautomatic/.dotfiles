@@ -10,4 +10,5 @@
 - include: python.yml
 - include: redis.yml
 - include: ruby.yml
+- include: rust.yml
 - include: vagrant.yml
