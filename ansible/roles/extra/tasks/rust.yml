@@ -1,6 +1,6 @@
 - name: Add Rust plugin to asdf
   tags: [ rust ]
-  shell: ~/.asdf/bin/asdf plugin-add rust https://github.com/asdf-community/asdf-rust.git
+  shell: ~/.asdf/bin/asdf plugin-add rust https://github.com/code-lever/asdf-rust
   args:
     creates: ~/.asdf/plugins/rust
     executable: /bin/bash
@@ -10,9 +10,9 @@
   shell: ~/.asdf/bin/asdf plugin update rust
   register: result
   changed_when:
-    - '"From https://github.com/asdf-community/asdf-rust" in result.stderr'
+    - '"From https://github.com/code-lever/asdf-rust" in result.stderr'
 
-- name: Install Rust (without docs)
+- name: Install Rust
   tags: [ rust ]
   shell: ~/.asdf/bin/asdf install rust {{ rust_version }}  && ~/.asdf/bin/asdf global rust {{ rust_version }}
   environment:
