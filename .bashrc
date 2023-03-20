@@ -21,6 +21,9 @@ if [[ -s "$HOME/.asdf/asdf.sh" ]]; then
   source "$HOME/.asdf/completions/asdf.bash"
 fi
 
+# batcat
+export BAT_CONFIG_PATH="$HOME/.batcatrc"
+
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if [[ -x `which rg` ]]; then
