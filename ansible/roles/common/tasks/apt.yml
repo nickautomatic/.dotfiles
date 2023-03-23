@@ -11,6 +11,7 @@
   apt:
     state: latest
     pkg:
+    - ansible
     - build-essential
     - htop
     - httpie
@@ -18,7 +19,9 @@
     - lynx
     - ncdu
     - pv
+    - python3-apt
     - silversearcher-ag
+    - software-properties-common
     - tig
     - unzip
     - zip
