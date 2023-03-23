@@ -22,7 +22,7 @@ if [[ -x `which ansible` ]]; then
   echo "Ansible is available"
   (
     cd ~/.dotfiles
-    ansible-playbook -v -K -i ansible/hosts ansible/playbook.yml --tags $tags
+    ANSIBLE_CONFIG=ansible/ansible.cfg ansible-playbook -v -K -i ansible/hosts ansible/playbook.yml --tags $tags
   )
 fi
 
