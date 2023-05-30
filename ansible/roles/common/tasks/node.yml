@@ -31,7 +31,6 @@
     global: yes
     executable: ~/n/bin/npm
   with_items:
-  - diff-so-fancy
   - git-mob
   - serve
   - ngrok

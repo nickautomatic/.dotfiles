@@ -53,7 +53,9 @@
   attributesfile = ~/.gitattributes
   editor = vim
   excludesfile = ~/.gitignore_global
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta --diff-so-fancy
+[delta]
+  hunk-header-style = omit
 [diff]
   colorMoved = plain
 [help]

@@ -2,6 +2,7 @@
 - include: apt.yml
 - include: asdf.yml
 - include: bash.yml
+- include: delta.yml
 - include: fzf.yml
 - include: git.yml
 - include: node.yml
