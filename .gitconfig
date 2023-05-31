@@ -67,5 +67,6 @@
   default = simple
 [rebase]
   autosquash = true
+  updateRefs = true
 [stash]
   showPatch = true
