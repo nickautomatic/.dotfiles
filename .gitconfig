@@ -53,7 +53,7 @@
   attributesfile = ~/.gitattributes
   editor = vim
   excludesfile = ~/.gitignore_global
-  pager = delta --diff-so-fancy
+  pager = delta --diff-so-fancy --side-by-side
 [delta]
   hunk-header-style = omit
 [diff]
