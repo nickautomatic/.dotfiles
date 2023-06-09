@@ -1,0 +1,39 @@
+- name: Download cheat
+  become: true
+  tags: [ cheat ]
+  shell: wget https://github.com/cheat/cheat/releases/download/4.4.0/cheat-linux-amd64.gz -q -o /dev/null \
+    && gunzip cheat-linux-amd64.gz \
+    && chmod +x cheat-linux-amd64 \
+    && mv cheat-linux-amd64 /usr/local/bin/cheat
+  args:
+    creates: /usr/local/bin/cheat
+    executable: /bin/bash
+
+- name: Locate cheat config
+  command: cheat --conf
+  tags: [ cheat ]
+  register: cheat_config_path
+
+- name: Colorize cheat output
+  tags: [ cheat ]
+  lineinfile:
+    path: "{{ cheat_config_path.stdout }}"
+    state: present
+    regexp: "^colorize:"
+    line: "colorize: true"
+
+- name: Set cheat pager
+  tags: [ cheat ]
+  lineinfile:
+    path: "{{ cheat_config_path.stdout }}"
+    state: present
+    regexp: "^pager:"
+    line: "pager: delta"
+
+- name: Add cheat completions for bash
+  become: true
+  tags: [ cheat ]
+  get_url:
+    url: https://raw.githubusercontent.com/cheat/cheat/master/scripts/cheat.bash
+    dest: /etc/bash_completion.d/cheat
+

@@ -24,6 +24,9 @@ fi
 # batcat
 export BAT_CONFIG_PATH="$HOME/.batcatrc"
 
+# cheat
+export CHEAT_USE_FZF=true
+
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 if [[ -x `which rg` ]]; then
