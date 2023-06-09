@@ -19,6 +19,10 @@
   tags: [ node, corepack ]
   command: corepack enable
 
+- name: Install latest pnpm
+  tags: [ node, corepack, pnpm ]
+  command: corepack prepare pnpm@latest --activate
+
 - name: Install some npm packages
   tags: [ node, npm ]
   npm:
