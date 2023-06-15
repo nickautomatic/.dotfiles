@@ -14,6 +14,7 @@ alias bat='batcat'
 alias fd='fdfind'
 alias less='less -R'
 alias ll='ls -alFh --color'
+alias ncdu='ncdu --color=dark'
 alias resetclock='sudo hwclock -s'
 alias x='exit 0'
 
