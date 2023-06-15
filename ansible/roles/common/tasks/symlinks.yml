@@ -15,5 +15,6 @@
   - .inputrc
   - .terraformrc
   - .tigrc
+  - .tldrrc
   - .tmux.conf
   - .vimrc
