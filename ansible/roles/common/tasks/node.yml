@@ -32,6 +32,7 @@
     executable: ~/n/bin/npm
   with_items:
   - git-mob
+  - npm
   - serve
   - ngrok
   - tldr
