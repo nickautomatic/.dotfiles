@@ -7,6 +7,11 @@ alias ncdu='ncdu --color=dark'
 alias resetclock='sudo hwclock -s'
 alias x='exit 0'
 
+## Docker
+alias dc='docker compose'
+alias dce='docker compose exec'
+alias dcea='docker compose exec app'
+
 ## Node.js
 alias caniuse="npx caniuse-cmd"
 
