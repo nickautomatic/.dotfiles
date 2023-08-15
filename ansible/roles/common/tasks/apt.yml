@@ -18,6 +18,7 @@
     - jq
     - lynx
     - ncdu
+    - nnn
     - pv
     - python3-apt
     - silversearcher-ag
