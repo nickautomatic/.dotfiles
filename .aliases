@@ -11,6 +11,7 @@ alias x='exit 0'
 alias dc='docker compose'
 alias dce='docker compose exec'
 alias dcea='docker compose exec app'
+alias dcua='docker compose up -d && docker attach $(docker-compose ps -q app)'
 
 ## Node.js
 alias caniuse="npx caniuse-cmd"
