@@ -30,7 +30,7 @@
   rbi = rebase -i
   reuse = commit --reuse-message
   rs = reset
-  s = status
+  s = status -s
   sh = show
   shs = show --stat
   squash = "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print $1 }' | xargs -o git commit --squash"
