@@ -72,5 +72,7 @@
 [rebase]
   autosquash = true
   updateRefs = true
+[rerere]
+  enabled = true
 [stash]
   showPatch = true
