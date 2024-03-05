@@ -1,0 +1,8 @@
+- name: Install Atuin
+  tags: [ atuin ]
+  become: true
+  shell: bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
+  args:
+    creates: /usr/local/bin/atuin
+    executable: /bin/bash
+    warn: false
