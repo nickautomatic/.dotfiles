@@ -22,6 +22,10 @@ if [[ -s "$HOME/.asdf/asdf.sh" ]]; then
   source "$HOME/.asdf/completions/asdf.bash"
 fi
 
+# atuin
+ATUIN_COMPLETIONS=~/atuin.bash
+[ -r $ATUIN_COMPLETIONS ] && source $ATUIN_COMPLETIONS
+
 # batcat
 export BAT_CONFIG_PATH="$HOME/.batcatrc"
 
