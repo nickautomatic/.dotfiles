@@ -59,6 +59,7 @@
   hunk-header-style = omit
   navigate = true
 [diff]
+  algorithm = histogram
   colorMoved = plain
 [help]
   autocorrect = prompt
