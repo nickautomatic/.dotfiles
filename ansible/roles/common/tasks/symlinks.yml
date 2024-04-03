@@ -13,7 +13,6 @@
   - .gitattributes
   - .gitignore_global
   - .inputrc
-  - .terraformrc
   - .tigrc
   - .tldrrc
   - .tmux.conf
