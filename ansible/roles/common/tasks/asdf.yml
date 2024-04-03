@@ -5,3 +5,7 @@
     depth: 1
     dest: ~/.asdf
     version: v{{ asdf_version }}
+
+- name: Update asdf-vm
+  tags: [ asdf ]
+  shell: asdf update
