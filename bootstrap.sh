@@ -3,7 +3,7 @@
 set -e
 
 # Install Ansible (on first run):
-if [[ ! -x `which ansible` ]]; then
+if [[ ! -x $(which ansible) ]]; then
   echo "Installing Ansible"
   sudo apt update
   sudo apt install --yes software-properties-common
@@ -14,15 +14,15 @@ fi
 # (Optionally) allow only tagged tasks to be run:
 tags="$1"
 
-if [ -z $tags ]; then
+if [ -z "$tags" ]; then
   tags="common"
 fi
 
-if [[ -x `which ansible` ]]; then
+if [[ -x $(which ansible) ]]; then
   echo "Ansible is available"
   (
     cd ~/.dotfiles
-    ANSIBLE_CONFIG=ansible/ansible.cfg ansible-playbook -v -K -i ansible/hosts ansible/playbook.yml --tags $tags
+    ANSIBLE_CONFIG=ansible/ansible.cfg ansible-playbook -v -K -i ansible/hosts ansible/playbook.yml --tags "$tags"
   )
 fi
 
