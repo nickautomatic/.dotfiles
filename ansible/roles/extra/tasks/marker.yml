@@ -4,3 +4,12 @@
   args:
     creates: ~/.marker
     executable: /bin/bash
+
+- name: Remove marker
+  tags: [ marker-remove ]
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+  - ~/.marker
+  - ~/.local/share/marker
