@@ -25,6 +25,7 @@ fi
 # atuin
 ATUIN_COMPLETIONS=~/atuin.bash
 [ -r $ATUIN_COMPLETIONS ] && source $ATUIN_COMPLETIONS
+export ATUIN_CONFIG_DIR="$HOME/.dotfiles/atuin"
 
 # batcat
 export BAT_CONFIG_PATH="$HOME/.batcatrc"
