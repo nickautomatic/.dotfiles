@@ -5,7 +5,6 @@
   args:
     creates: ~/n
     executable: /bin/bash
-    warn: false
 
 - name: Update n to latest version
   tags: [ node ]
