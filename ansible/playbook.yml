@@ -8,11 +8,11 @@
     - role: private
       tags: [ private ]
   vars:
-    - home: "{{ ansible_env['HOME'] }}"
-    - asdf_version: 0.14.0
-    - delta_version: 0.17.0
-    - gh_version: 2.46.0
-    - php_version: 7.4
-    - ruby_version: 3.2.2
-    - rust_version: 1.68.0
-    - vagrant_version: 2.2.10
+    home: "{{ ansible_env['HOME'] }}"
+    asdf_version: 0.14.0
+    delta_version: 0.17.0
+    gh_version: 2.46.0
+    php_version: 7.4
+    ruby_version: 3.2.2
+    rust_version: 1.68.0
+    vagrant_version: 2.2.10
