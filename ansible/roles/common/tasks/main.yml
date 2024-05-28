@@ -1,10 +1,10 @@
 ---
-- include_tasks: apt.yml
-- include_tasks: asdf.yml
-- include_tasks: bash.yml
-- include_tasks: delta.yml
-- include_tasks: fzf.yml
-- include_tasks: git.yml
-- include_tasks: node.yml
-- include_tasks: symlinks.yml
-- include_tasks: z.yml
+- import_tasks: apt.yml
+- import_tasks: asdf.yml
+- import_tasks: bash.yml
+- import_tasks: delta.yml
+- import_tasks: fzf.yml
+- import_tasks: git.yml
+- import_tasks: node.yml
+- import_tasks: symlinks.yml
+- import_tasks: z.yml
