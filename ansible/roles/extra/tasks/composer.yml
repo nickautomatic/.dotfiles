@@ -4,4 +4,3 @@
   args:
     creates: /usr/local/bin/composer
     executable: /bin/bash
-    warn: false

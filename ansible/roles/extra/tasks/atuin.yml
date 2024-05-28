@@ -4,7 +4,6 @@
   args:
     creates: /usr/bin/atuin
     executable: /bin/bash
-    warn: false
 
 - name: Import existing shell history
   tags: [ atuin ]
