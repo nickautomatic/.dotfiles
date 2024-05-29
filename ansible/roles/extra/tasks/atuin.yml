@@ -5,6 +5,20 @@
     creates: /usr/bin/atuin
     executable: /bin/bash
 
+- name: Remove line Atuin adds to .bashrc
+  tags: [ atuin ]
+  lineinfile:
+    path: "{{ home }}/.bashrc"
+    line: 'eval "$(atuin init bash)"'
+    state: absent
+
+- name: Disable up arrow for Atuin
+  tags: [ atuin ]
+  lineinfile:
+    path: "{{ home }}/.bashrc"
+    line: 'eval "$(atuin init bash --disable-up-arrow)"'
+    state: present
+
 - name: Import existing shell history
   tags: [ atuin ]
   shell: atuin import auto
