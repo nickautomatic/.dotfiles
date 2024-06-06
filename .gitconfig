@@ -24,6 +24,7 @@
   m = merge
   mainormaster = !"git branch --format '%(refname:short)' --sort=-committerdate --list master main | head -n1"
   oops = commit --amend --no-edit
+  pfl = push --force-with-lease
   rb = rebase
   rba = rebase --abort
   rbc = rebase --continue
