@@ -3,6 +3,7 @@ shopt -s histappend
 export HISTSIZE=5000
 export HISTFILESIZE=5000
 export HISTCONTROL="erasedups:ignoreboth"
+export COREPACK_ENABLE_AUTO_PIN=0
 
 # Git completions / prompt:
 GIT_COMPLETIONS=/usr/share/bash-completion/completions/git
