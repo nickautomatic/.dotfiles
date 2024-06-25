@@ -56,7 +56,7 @@
   attributesfile = ~/.gitattributes
   editor = vim
   excludesfile = ~/.gitignore_global
-  pager = delta --diff-so-fancy --side-by-side
+  pager = delta
 [delta]
   hunk-header-style = omit
   navigate = true
