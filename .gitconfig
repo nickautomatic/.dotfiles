@@ -60,6 +60,7 @@
 [delta]
   hunk-header-style = omit
   navigate = true
+  true-color = always
 [diff]
   algorithm = histogram
   colorMoved = plain
