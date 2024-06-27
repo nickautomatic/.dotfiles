@@ -63,7 +63,7 @@
   true-color = always
 [diff]
   algorithm = histogram
-  colorMoved = plain
+  colorMoved = default
 [help]
   autocorrect = prompt
 [init]
