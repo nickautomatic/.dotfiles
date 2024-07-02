@@ -42,7 +42,6 @@
   wip = "!git add . && git commit --no-verify -m 'WIP'"
 [blame]
   coloring = highlightRecent
-  ignoreRevsFile = .git-blame-ignore-revs
 [branch]
   sort = -committerdate
 [color "blame"]
