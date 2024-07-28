@@ -37,3 +37,10 @@
     dest: ~/.config/nvim
     state: link
     force: yes
+
+- name: Use nvim instead of vim
+  tags: [ neovim ]
+  become: yes
+  alternatives:
+    name: vim
+    path: /usr/bin/nvim
