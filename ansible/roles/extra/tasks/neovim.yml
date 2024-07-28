@@ -1,0 +1,14 @@
+- name: Update apt packages
+  tags: [ neovim ]
+  become: yes
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install neovim
+  tags: [ neovim ]
+  become: yes
+  apt:
+    state: latest
+    pkg:
+    - neovim
