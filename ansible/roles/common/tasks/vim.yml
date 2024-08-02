@@ -1,0 +1,13 @@
+- name: Ensure vim colors directory exists
+  tags: [ vim ]
+  file:
+    path: ~/.vim/colors
+    recurse: true
+    state: directory
+
+- name: Install catppuccin theme
+  tags: [ vim ]
+  get_url:
+    url: https://raw.githubusercontent.com/catppuccin/vim/main/colors/catppuccin_mocha.vim
+    dest: ~/.vim/colors/catppuccin_mocha.vim
+    mode: u+x
