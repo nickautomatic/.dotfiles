@@ -36,4 +36,4 @@ alias explorer='explorer.exe'
 alias multipass='/mnt/c/Program\ Files/Multipass/bin/multipass.exe'
 alias open='cmd.exe /C start'
 alias start='cmd.exe /C start'
-
+alias winget='winget.exe'
