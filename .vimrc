@@ -1,5 +1,3 @@
-colorscheme catppuccin_mocha
-
 set colorcolumn=73 " Visually indicate where text will wrap
 highlight ColorColumn ctermbg=235
 highlight Visual cterm=reverse ctermbg=0 ctermfg=NONE
