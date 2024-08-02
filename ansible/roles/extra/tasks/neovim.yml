@@ -1,3 +1,9 @@
+- name: Add Neovim PPA repository
+  tags: [ neovim ]
+  become: yes
+  apt_repository:
+    repo: ppa:neovim-ppa/unstable
+
 - name: Update apt packages
   tags: [ neovim ]
   become: yes
