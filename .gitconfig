@@ -59,6 +59,7 @@
 [delta]
   hunk-header-style = omit
   navigate = true
+  tabs = 2
   true-color = always
 [diff]
   algorithm = histogram
