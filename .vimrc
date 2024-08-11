@@ -10,3 +10,6 @@ set textwidth=72
 
 set number
 set relativenumber
+
+set ignorecase
+set smartcase
