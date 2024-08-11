@@ -13,3 +13,4 @@ set relativenumber
 
 set ignorecase
 set smartcase
+set incsearch
