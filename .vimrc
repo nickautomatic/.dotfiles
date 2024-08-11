@@ -7,3 +7,6 @@ set expandtab    " Expand tabs to spaces
 set shiftwidth=2 " No of spaces to Auto-indent by
 set tabstop=2    " No of spaces to insert when tab is pressed
 set textwidth=72
+
+set number
+set relativenumber
