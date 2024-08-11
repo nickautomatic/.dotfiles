@@ -16,3 +16,12 @@ set smartcase
 set incsearch
 
 syntax on
+
+nmap Q <Nop>
+set backspace=indent,eol,start
+set hidden
+set laststatus=2
+set mouse+=a
+set nocompatible
+set noerrorbells visualbell t_vb=
+set shortmess+=I
