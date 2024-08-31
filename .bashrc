@@ -5,6 +5,8 @@ export HISTFILESIZE=5000
 export HISTCONTROL="erasedups:ignoreboth"
 export COREPACK_ENABLE_AUTO_PIN=0
 
+LS_COLORS="$LS_COLORS:ow=30;42"
+
 # Git completions / prompt:
 GIT_COMPLETIONS=/usr/share/bash-completion/completions/git
 [ -r $GIT_COMPLETIONS ] && source $GIT_COMPLETIONS
