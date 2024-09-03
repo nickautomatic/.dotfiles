@@ -4,6 +4,7 @@
   args:
     creates: /usr/bin/atuin
     executable: /bin/bash
+  register: atuin_install
 
 - name: Remove line Atuin adds to .bashrc
   tags: [ atuin ]
@@ -29,6 +30,7 @@
 - name: Import existing shell history
   tags: [ atuin ]
   shell: atuin import auto
+  when: atuin_install.changed
 
 - name: Generate completions for atuin
   tags: [ atuin ]
