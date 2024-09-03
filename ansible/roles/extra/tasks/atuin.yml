@@ -35,3 +35,4 @@
 - name: Generate completions for atuin
   tags: [ atuin ]
   shell: atuin gen-completions --shell bash --out-dir $HOME
+  when: atuin_install.changed or atuin_update.changed
