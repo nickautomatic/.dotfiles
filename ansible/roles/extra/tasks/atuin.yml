@@ -19,6 +19,13 @@
     line: 'eval "$(atuin init bash --disable-up-arrow)"'
     state: present
 
+- name: Update Atuin
+  tags: [ atuin ]
+  shell: "{{ home }}/.atuin/bin/atuin-update"
+  register: atuin_update
+  changed_when:
+    - '"Already up to date" not in atuin_update.stderr'
+
 - name: Import existing shell history
   tags: [ atuin ]
   shell: atuin import auto
