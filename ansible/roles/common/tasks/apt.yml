@@ -12,7 +12,9 @@
     state: latest
     pkg:
     - ansible
+    - bat
     - build-essential
+    - fd-find
     - htop
     - httpie
     - jq
@@ -21,27 +23,14 @@
     - nnn
     - pv
     - python3-apt
+    - ripgrep
     - silversearcher-ag
     - software-properties-common
     - tig
     - unzip
+    - vim
     - zip
   register: apt
-
-- name: Install a few more tools
-  tags: [ apt ]
-  become: yes
-  apt:
-    state: latest
-    pkg:
-    - bat
-    - fd-find
-    - ripgrep
-    - vim
-  register: apt2
-  when:
-  - ansible_facts['distribution'] == "Ubuntu" or ansible_facts['distribution'] == 'Pop!_OS'
-  - ansible_facts['distribution_major_version'] >= "20"
 
 #---
 # Reporting:
@@ -50,10 +39,10 @@
   tags: [ apt ]
   shell: grep -E "^$(date +%Y-%m-%d).+ (install|upgrade) " /var/log/dpkg.log |cut -d " " -f 3-6
   register: result
-  when: apt.changed or apt2.changed
+  when: apt.changed
 
 - name: Show installed and upgraded packages
   tags: [ apt ]
   debug:
     msg: "{{ result.stdout_lines }}"
-  when: apt.changed or apt2.changed
+  when: apt.changed
