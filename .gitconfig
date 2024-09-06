@@ -63,6 +63,8 @@
 [diff]
   algorithm = histogram
   colorMoved = default
+[diff "javascript"]
+  xfuncname = "^((.*)(class|const|function|let|get|set|static|(.*)\\(\\)) (.*)\\{)$"
 [help]
   autocorrect = prompt
 [init]

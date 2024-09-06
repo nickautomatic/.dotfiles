@@ -4,8 +4,12 @@
 *.ex    diff=elixir
 *.exs   diff=elixir
 *.go    diff=golang
+*.js    diff=javascript
+*.jsx   diff=javascript
 *.php   diff=php
 *.py    diff=python
 *.md    diff=markdown
 *.rb    diff=ruby
 *.rake  diff=ruby
+*.ts    diff=javascript
+*.tsx   diff=javascript
