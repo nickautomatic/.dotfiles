@@ -57,7 +57,6 @@
   excludesfile = ~/.gitignore_global
   pager = delta --side-by-side
 [delta]
-  hunk-header-style = omit
   navigate = true
   tabs = 2
   true-color = always
