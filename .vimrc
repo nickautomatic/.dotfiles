@@ -1,5 +1,6 @@
 set textwidth=72   " Autowrap to a new line after 72 characters
 set colorcolumn=+1 " Visually indicate where text will wrap
+set cursorline
 highlight ColorColumn ctermbg=235
 highlight Visual cterm=reverse ctermbg=0 ctermfg=NONE
 
