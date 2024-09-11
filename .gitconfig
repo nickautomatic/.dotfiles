@@ -55,7 +55,7 @@
   attributesfile = ~/.gitattributes
   editor = vim
   excludesfile = ~/.gitignore_global
-  pager = delta --side-by-side
+  pager = "if [ $COLUMNS -gt 130 ]; then P='delta --side-by-side'; else P='delta'; fi; $P"
 [delta]
   navigate = true
   tabs = 2
