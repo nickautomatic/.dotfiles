@@ -57,6 +57,8 @@
   excludesfile = ~/.gitignore_global
   pager = "if [ $COLUMNS -gt 130 ]; then P='delta --side-by-side'; else P='delta'; fi; $P"
 [delta]
+  line-numbers-minus-style = tomato
+  line-numbers-plus-style = green
   navigate = true
   tabs = 2
   true-color = always
