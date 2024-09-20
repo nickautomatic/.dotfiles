@@ -42,6 +42,9 @@ if [[ -x `which rg` ]]; then
   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!{node_modules,.git}'"
 fi
 
+# man
+export MANPAGER="less -R --use-color -Dd+y -Du+208 -DN+r"
+
 # n
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 export PATH="$N_PREFIX/bin:$PATH"
