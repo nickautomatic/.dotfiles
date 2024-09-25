@@ -1,7 +1,7 @@
 [alias]
   a = add
   alias = "!f() { git config --get-regexp ^alias. | cut -c7- | grep -E \"${1}\" --color=always | sed 's/ /\t/'; }; f"
-  amend = commit --amend
+  amend = commit --amend --allow-empty
   ap = add -p
   b = branch
   bl = blame
