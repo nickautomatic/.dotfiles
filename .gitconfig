@@ -14,7 +14,6 @@
   coi = "!git branches | fzf --ansi | awk '{ print $1; }' | sed 's/*//' | xargs git checkout"
   contributors = shortlog --email --summary --numbered
   cp = cherry-pick
-  cv = commit -v
   d = diff
   ds = diff --staged
   f = fetch --all
