@@ -1,0 +1,28 @@
+---
+- name: Install winget packages
+  tags: [ winget ]
+  shell:  winget.exe install --silent --exact "{{ item }}" --accept-package-agreements --accept-source-agreements
+  loop:
+    - "7zip.7zip"
+    - "Docker.DockerDesktop"
+    - "Dropbox.Dropbox"
+    - "IrfanSkiljan.IrfanView"
+    - "JAMSoftware.TreeSize.Free"
+    - "KeePassXCTeam.KeePassXC"
+    - "Logitech.OptionsPlus"
+    - "Logitech.UnifyingSoftware"
+    - "MichaelTippach.ASIO4ALL"
+    - "Microsoft.PowerToys"
+    - "Microsoft.VisualStudioCode"
+    - "Microsoft.WindowsTerminal"
+    - "Mozilla.Firefox.DeveloperEdition"
+    - "Obsidian.Obsidian"
+    - "Proton.ProtonVPN"
+    - "SlackTechnologies.Slack"
+    - "VideoLAN.VLC"
+  register: result
+  failed_when:
+    - '"Successfully installed" not in result.stdout'
+    - '"No available upgrade found" not in result.stdout'
+  changed_when:
+    - '"Successfully installed" in result.stdout'
