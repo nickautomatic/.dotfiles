@@ -1,6 +1,4 @@
 set main-view = line-number:no,interval=5 id:yes date:default author:width=20 commit-title:yes,graph,refs,overflow=no
 set ignore-space = some
 set line-graphics = utf-8
-set vertical-split = true
-set split-view-width = 55%
 color cursor black green bold
