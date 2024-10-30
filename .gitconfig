@@ -61,6 +61,7 @@
   navigate = true
   tabs = 2
   true-color = always
+  wrap-max-lines = unlimited
 [diff]
   algorithm = histogram
   colorMoved = default
