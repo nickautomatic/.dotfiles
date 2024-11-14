@@ -7,6 +7,7 @@
   bl = blame
   branches = "!git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:magenta)%(objectname:short)|%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:cyan)%(authorname)%(color:reset)' --color=always | column -ts'|'"
   br = "!setterm -linewrap off; git branches; setterm -linewrap on;"
+  bri = "!git branches | fzf --ansi | sed 's/*//' | awk '{ print $2; }' | xargs tig --stdin"
   ch = checkout
   c = commit
   cm = commit -m
