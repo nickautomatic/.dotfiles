@@ -11,7 +11,7 @@
   c = commit
   cm = commit -m
   co = checkout
-  coi = "!git branches | fzf --ansi | awk '{ print $1; }' | sed 's/*//' | xargs git checkout"
+  coi = "!git branches | fzf --ansi | sed 's/*//' | awk '{ print $2; }' | xargs git checkout"
   contributors = shortlog --email --summary --numbered
   cp = cherry-pick
   d = diff
