@@ -1,19 +1,14 @@
-- name: Check latest version of Helix
-  become: true
+- name: Add Helix PPA repository
   tags: [ helix ]
-  shell:
-    cmd: |
-      curl -s "https://api.github.com/repos/helix-editor/helix/releases/latest" | grep -Po '"tag_name": "\K[0-9.]+'
-  register: helix_version
+  become: yes
+  apt_repository:
+    repo: ppa:maveonair/helix-editor
 
 - name: Install Helix
-  become: true
   tags: [ helix ]
-  shell: wget -qO /tmp/helix.tar.xz https://github.com/helix-editor/helix/releases/latest/download/helix-{{ helix_version.stdout }}-x86_64-linux.tar.xz
-      && mkdir -p /opt/helix
-      && tar xf /tmp/helix.tar.xz --strip-components=1 -C /opt/helix
-      && ln -s /opt/helix/hx /usr/local/bin/hx
-      && rm -rf /tmp/helix.tar.xz
-  args:
-    creates: /usr/local/bin/hx
-    executable: /bin/bash
+  become: yes
+  apt:
+    state: latest
+    pkg:
+    - helix
+
