@@ -53,7 +53,7 @@
   verbose = true
 [core]
   attributesfile = ~/.gitattributes
-  editor = vim
+  editor = hx
   excludesfile = ~/.gitignore_global
   pager = "if [ $COLUMNS -gt 130 ]; then P='delta --side-by-side'; else P='delta'; fi; $P"
 [delta]
