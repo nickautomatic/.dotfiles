@@ -12,3 +12,9 @@
     pkg:
     - helix
 
+- name: Symlink Helix config file
+  tags: [ helix ]
+  file:
+    src: "~/.dotfiles/helix/config.toml"
+    dest: "~/.config/helix/config.toml"
+    state: link

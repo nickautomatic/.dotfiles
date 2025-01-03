@@ -1,0 +1,11 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+cursorline = true
+line-number = "relative"
+true-color = true
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
