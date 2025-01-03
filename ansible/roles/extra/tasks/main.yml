@@ -5,6 +5,7 @@
 - import_tasks: composer.yml
 - import_tasks: cypress.yml
 - import_tasks: gh.yml
+- import_tasks: helix.yml
 - import_tasks: heroku.yml
 - import_tasks: marker.yml
 - import_tasks: neovim.yml
