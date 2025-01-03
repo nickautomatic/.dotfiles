@@ -1,0 +1,3 @@
+[[language]]
+name = "git-commit"
+soft-wrap = { enable = true, wrap-at-text-width = true }
