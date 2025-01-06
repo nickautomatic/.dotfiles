@@ -12,3 +12,9 @@ mode.select = "SELECT"
 
 [keys.insert]
 j = { k = "normal_mode" }
+
+[keys.normal]
+X = "select_line_above"
+
+[keys.select]
+X = "select_line_above"
