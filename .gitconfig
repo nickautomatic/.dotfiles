@@ -1,3 +1,5 @@
+[advice]
+  skippedCherryPicks = false
 [alias]
   a = add
   alias = "!f() { git config --get-regexp ^alias. | cut -c7- | grep -E \"${1}\" --color=always | sed 's/ /\t/'; }; f"
