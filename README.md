@@ -42,6 +42,7 @@ The Ansible tasks are essentially declarative: they describe a state that the sy
 
 There are a few things here I find particularly useful:
 
+* [atuin](https://atuin.sh) - for infinite, searchable shell history
 * [delta](https://github.com/dandavison/delta) - for nicer git diffs
 * [fzf](https://github.com/junegunn/fzf) - for enhanced bash history search, among other things
 * [tig](https://www.atlassian.com/blog/git/git-tig) - for browsing git history
