@@ -6,6 +6,7 @@
   amend = commit --amend --allow-empty
   ap = add -p
   b = branch
+  ba = branch --all --sort=refname
   bl = blame
   branches = "!git for-each-ref --sort=-committerdate refs/heads --format='%(HEAD) %(color:magenta)%(objectname:short)|%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:cyan)%(authorname)%(color:reset)' --color=always | column -ts'|'"
   br = "!setterm -linewrap off; git branches; setterm -linewrap on;"
