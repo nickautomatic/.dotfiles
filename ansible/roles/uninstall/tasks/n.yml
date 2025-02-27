@@ -1,0 +1,7 @@
+---
+- name: Remove n (Node.js version management) and all versions of Node it installed
+  tags: [ uninstall-n ]
+  shell: n-uninstall -y
+  args:
+    removes: ~/n
+    executable: /bin/bash

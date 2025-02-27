@@ -7,6 +7,8 @@
       tags: [ extra ]
     - role: private
       tags: [ private ]
+    - role: uninstall
+      tags: [ uninstall ]
   vars:
     home: "{{ ansible_env['HOME'] }}"
     delta_version: 0.17.0
