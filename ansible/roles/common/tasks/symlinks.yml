@@ -5,7 +5,6 @@
     dest: "~/{{ item }}"
     state: link
   with_items:
-  - .asdfrc
   - .batcatrc
   - .default-gems
   - .editorconfig
