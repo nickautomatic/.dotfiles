@@ -4,3 +4,11 @@
   args:
     creates: ~/.local/bin/mise
     executable: /bin/bash
+
+- name: Install completion script for mise
+  become: true
+  tags: [ mise ]
+  shell: "{{ home }}/.local/bin/mise completion bash --include-bash-completion-lib > /etc/bash_completion.d/mise"
+  args:
+    creates: /etc/bash_completion.d/mise
+    executable: /bin/bash
