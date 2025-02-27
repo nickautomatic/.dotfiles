@@ -1,18 +1,7 @@
 ---
-- name: Install n (Node.js version management) with latest version of Node
-  tags: [ node ]
-  shell: curl -L https://git.io/n-install | PATH=/bin:/usr/bin bash -s -- -y lts
-  args:
-    creates: ~/n
-    executable: /bin/bash
-
-- name: Update n to latest version
-  tags: [ node ]
-  command: n-update -y
-
 - name: Install latest LTS version of Node
   tags: [ node ]
-  command: n lts
+  command: mise use --global node@lts
 
 - name: Enable corepack
   tags: [ node, corepack ]
@@ -28,7 +17,7 @@
     name: "{{ item }}"
     state: latest
     global: yes
-    executable: ~/n/bin/npm
+    executable: npm
   with_items:
   - git-mob
   - npm
