@@ -57,6 +57,9 @@ if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
   bind '"'"${MARKER_KEY_GET:-\C-X}"'":"\emg1"'
 fi
 
+# mise-en-place
+[ -f ~/.local/bin/mise ] && eval "$(~/.local/bin/mise activate bash)"
+
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
