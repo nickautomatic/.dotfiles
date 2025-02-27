@@ -19,12 +19,6 @@ source ~/.dotfiles/.bash_prompt
 # .extra is an optional .gitignored file for local settings:
 [ -r ~/.dotfiles/.extra ] && source ~/.dotfiles/.extra
 
-# asdf
-if [[ -s "$HOME/.asdf/asdf.sh" ]]; then
-  source "$HOME/.asdf/asdf.sh"
-  source "$HOME/.asdf/completions/asdf.bash"
-fi
-
 # atuin
 ATUIN_COMPLETIONS=~/atuin.bash
 [ -r $ATUIN_COMPLETIONS ] && source $ATUIN_COMPLETIONS
