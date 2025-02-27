@@ -5,10 +5,16 @@
     creates: ~/.local/bin/mise
     executable: /bin/bash
 
-- name: Install completion script for mise
-  become: true
+- name: Install Usage
   tags: [ mise ]
-  shell: "{{ home }}/.local/bin/mise completion bash --include-bash-completion-lib > /etc/bash_completion.d/mise"
+  shell: ~/.local/bin/mise use --global usage
+  register: usage
+  changed_when:
+    - '"installed" in usage.stderr'
+
+- name: Create completion script for mise
+  tags: [ mise ]
+  shell: ~/.local/bin/mise completion bash --include-bash-completion-lib > {{ home }}/mise.bash
   args:
-    creates: /etc/bash_completion.d/mise
+    creates: ~/mise.bash
     executable: /bin/bash
