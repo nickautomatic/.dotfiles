@@ -1,0 +1,6 @@
+- name: Install mise-en-place
+  tags: [ mise ]
+  shell: curl https://mise.run | sh
+  args:
+    creates: ~/.local/bin/mise
+    executable: /bin/bash

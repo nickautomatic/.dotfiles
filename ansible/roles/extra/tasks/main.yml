@@ -8,6 +8,7 @@
 - import_tasks: helix.yml
 - import_tasks: heroku.yml
 - import_tasks: marker.yml
+- import_tasks: mise.yml
 - import_tasks: neovim.yml
 - import_tasks: php.yml
 - import_tasks: pre-commit.yml
