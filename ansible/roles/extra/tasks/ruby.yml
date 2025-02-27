@@ -10,23 +10,9 @@
     - libyaml-dev
     - zlib1g-dev
 
-- name: Add Ruby plugin to asdf
-  tags: [ ruby ]
-  shell: ~/.asdf/bin/asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-  args:
-    creates: ~/.asdf/plugins/ruby
-    executable: /bin/bash
-
-- name: Update Ruby plugin
-  tags: [ ruby ]
-  shell: ~/.asdf/bin/asdf plugin update ruby
-  register: result
-  changed_when:
-    - '"From https://github.com/asdf-vm/asdf-ruby" in result.stderr'
-
 - name: Install Ruby
   tags: [ ruby ]
-  shell: ~/.asdf/bin/asdf install ruby {{ ruby_version }} && ~/.asdf/bin/asdf global ruby {{ ruby_version }}
+  shell: mise use --global ruby@{{ ruby_version }}
   args:
-    creates: ~/.asdf/installs/ruby/{{ ruby_version }}
+    creates: ~/.local/share/mise/installs/ruby/{{ ruby_version }}
     executable: /bin/bash
