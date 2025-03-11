@@ -45,6 +45,7 @@ There are a few things here I find particularly useful:
 * [atuin](https://atuin.sh) - for infinite, searchable shell history
 * [delta](https://github.com/dandavison/delta) - for nicer git diffs
 * [fzf](https://github.com/junegunn/fzf) - for enhanced bash history search, among other things
+* [mise](https://mise.jdx.dev) - for managing programming language versions
 * [tig](https://www.atlassian.com/blog/git/git-tig) - for browsing git history
 * [tldr](https://tldr.sh) - simplified man pages with practical examples of CLI commands
 * [z](https://github.com/rupa/z) - for quickly jumping between recently-used directories
