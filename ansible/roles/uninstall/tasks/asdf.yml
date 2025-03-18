@@ -5,6 +5,12 @@
     path: ~/.asdf
     state: absent
 
+- name: Remove symlink to .asdfrc
+  tags: [ uninstall-asdf ]
+  file:
+    path: ~/.asdfrc
+    state: absent
+
 - name: Note about .tool-versions
   debug:
     msg: You can probably also delete ~/.tool-versions now too, but first make sure everything there is managed by mise.
