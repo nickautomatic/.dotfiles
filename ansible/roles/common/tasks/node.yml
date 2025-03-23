@@ -11,16 +11,22 @@
   tags: [ node, corepack, pnpm ]
   command: corepack prepare pnpm@latest --activate
 
-- name: Install some npm packages
+- name: Update npm to the latest version
   tags: [ node, npm ]
   npm:
-    name: "{{ item }}"
+    name: npm
     state: latest
     global: yes
     executable: npm
+
+- name: Install some npm packages
+  tags: [ node, npm ]
+  command: "mise use --global npm:{{ item }}@latest"
+  register: output
+  changed_when:
+  - '"installed" in output.stderr'
   with_items:
   - git-mob
-  - npm
   - serve
   - ngrok
   - tldr
