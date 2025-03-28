@@ -11,7 +11,7 @@
       tags: [ uninstall ]
   vars:
     home: "{{ ansible_env['HOME'] }}"
-    delta_version: 0.17.0
+    delta_version: 0.18.2
     gh_version: 2.46.0
     php_version: 7.4
     ruby_version: 3.2.5
