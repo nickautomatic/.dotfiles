@@ -1,11 +1,11 @@
 ---
+- name: Always enable corepack with Node
+  tags: [ node, corepack ]
+  command: mise set --global MISE_NODE_COREPACK=true
+
 - name: Install latest LTS version of Node
   tags: [ node ]
   command: mise use --global node@lts
-
-- name: Enable corepack
-  tags: [ node, corepack ]
-  command: corepack enable
 
 - name: Install latest pnpm
   tags: [ node, corepack, pnpm ]
