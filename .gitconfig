@@ -34,6 +34,7 @@
   rbi = rebase -i
   reuse = commit --reuse-message
   rs = reset
+  rshu = reset --hard @{upstream}
   s = status -s
   sh = show
   shs = show --stat
