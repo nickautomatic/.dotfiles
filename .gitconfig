@@ -38,6 +38,7 @@
   s = status -s
   sh = show
   shs = show --stat
+  shwo = show
   squash = "!git log -n 15 --oneline --color=always | fzf --ansi | awk '{ print $1 }' | xargs -o git commit --squash"
   st = status
   sw = switch
