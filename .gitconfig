@@ -89,3 +89,5 @@
   enabled = true
 [stash]
   showPatch = true
+[url "git@github.com:"]
+  insteadOf = "gh:"
