@@ -1,5 +1,6 @@
 ## Bash
 alias bat='batcat'
+alias cdtop='cd $(git rev-parse --show-toplevel)'
 alias fd='fdfind'
 alias less='less -R'
 alias ll='ls -alFh --color'
