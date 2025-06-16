@@ -4,6 +4,7 @@
 - import_tasks: chrome.yml
 - import_tasks: composer.yml
 - import_tasks: cypress.yml
+- import_tasks: eza.yml
 - import_tasks: gh.yml
 - import_tasks: helix.yml
 - import_tasks: heroku.yml
