@@ -1,0 +1,6 @@
+- name: Install zellij
+  tags: [ zellij ]
+  shell: mise use --global zellij
+  register: output
+  changed_when:
+  - '"installed" in output.stderr'

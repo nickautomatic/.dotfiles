@@ -75,6 +75,9 @@ z() {
   cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
+# Zellij
+export ZELLIJ_CONFIG_DIR="$HOME/.dotfiles/zellij"
+
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 # Launch SSH agent:

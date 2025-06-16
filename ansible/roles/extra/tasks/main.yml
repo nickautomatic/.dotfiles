@@ -17,3 +17,4 @@
 - import_tasks: ruby.yml
 - import_tasks: rust.yml
 - import_tasks: vagrant.yml
+- import_tasks: zellij.yml
