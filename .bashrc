@@ -77,6 +77,12 @@ z() {
 
 # Zellij
 export ZELLIJ_CONFIG_DIR="$HOME/.dotfiles/zellij"
+export ZELLIJ_AUTO_EXIT=true
+if [ -z "$VS_CODE_TERMINAL" ]; then
+  if [[ -x `which zellij` ]]; then
+    eval "$(zellij setup --generate-auto-start bash)"
+  fi
+fi
 
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
