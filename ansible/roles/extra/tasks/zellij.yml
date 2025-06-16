@@ -4,3 +4,10 @@
   register: output
   changed_when:
   - '"installed" in output.stderr'
+
+- name: Install zellij completions
+  tags: [ zellij ]
+  shell: zellij setup --generate-completion bash > ~/.dotfiles/private/zellij-completions.bash
+  args:
+    creates: ~/.dotfiles/private/zellij-completions.bash
+    executable: /bin/bash

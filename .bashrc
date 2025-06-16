@@ -79,6 +79,8 @@ z() {
 # Zellij
 export ZELLIJ_CONFIG_DIR="$HOME/.dotfiles/zellij"
 export ZELLIJ_AUTO_EXIT=true
+ZELLIJ_COMPLETIONS="$HOME/.dotfiles/private/zellij-completions.bash"
+[ -r $ZELLIJ_COMPLETIONS ] && source $ZELLIJ_COMPLETIONS
 if [ -z "$VS_CODE_TERMINAL" ]; then
   if [[ -x `which zellij` ]]; then
     eval "$(zellij setup --generate-auto-start bash)"
