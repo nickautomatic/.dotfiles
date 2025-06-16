@@ -4,11 +4,3 @@
   register: output
   changed_when:
   - '"installed" in output.stderr'
-
-- name: Install catppuccin theme for eza
-  tags: [ eza ]
-  file:
-    src: "~/.dotfiles/eza"
-    dest: "~/.config/eza"
-    state: link
-    force: yes
