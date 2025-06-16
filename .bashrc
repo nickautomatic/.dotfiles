@@ -62,6 +62,9 @@ fi
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# Starship
+export STARSHIP_CONFIG="$HOME/.dotfiles/starship.toml"
+
 # Vagrant
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
