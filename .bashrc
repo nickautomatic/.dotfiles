@@ -15,7 +15,6 @@ source ~/.dotfiles/scripts/git-prompt.sh
 
 # Load other dotfiles:
 source ~/.dotfiles/.aliases
-source ~/.dotfiles/.bash_prompt
 
 # .extra is an optional .gitignored file for local settings:
 [ -r ~/.dotfiles/.extra ] && source ~/.dotfiles/.extra
@@ -61,6 +60,10 @@ fi
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# Starship
+export STARSHIP_CONFIG="$HOME/.dotfiles/starship.toml"
+eval "$(starship init bash)"
 
 # Vagrant
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"

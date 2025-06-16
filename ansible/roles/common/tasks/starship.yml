@@ -1,0 +1,6 @@
+- name: Install latest starship
+  tags: [ starship ]
+  become: yes
+  shell: curl -sS https://starship.rs/install.sh | sh -s -- --yes
+  args:
+    executable: /bin/bash
