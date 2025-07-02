@@ -1,3 +1,4 @@
 .extra
 .zshrc.zwc
 ansible/roles/private
+*.bak
