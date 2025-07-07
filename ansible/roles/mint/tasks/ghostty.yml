@@ -1,0 +1,6 @@
+- name: Include custom config for ghostty
+  tags: [ ghostty ]
+  lineinfile:
+    path: "{{ home }}/.config/ghostty/config"
+    line: 'config-file = ~/.dotfiles/ghostty/config'
+    state: present
