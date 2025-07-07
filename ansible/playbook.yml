@@ -5,8 +5,6 @@
       tags: [ common ]
     - role: extra
       tags: [ extra ]
-    - role: mint
-      tags: [ mint ]
     - role: private
       tags: [ private ]
     - role: uninstall
