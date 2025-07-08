@@ -1,0 +1,37 @@
+---
+- name: Install required system packages for Docker
+  tags: [ docker ]
+  become: yes
+  apt:
+    name:
+      - ca-certificates
+      - curl
+    state: latest
+    update_cache: true
+
+- name: Add Docker GPG apt Key
+  tags: [ docker ]
+  become: yes
+  get_url:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    dest: /etc/apt/keyrings/docker.asc
+
+- name: Get name of apt repository
+  tags: [ docker ]
+  shell: echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable"
+  register: docker_apt_repository
+
+- name: Add Docker Repository
+  tags: [ docker ]
+  become: yes
+  apt_repository:
+    repo: "{{ docker_apt_repository.stdout }}"
+    state: present
+
+- name: Install Docker Desktop
+  tags: [ docker ]
+  become: yes
+  apt:
+    deb: https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
+    state: present
+
