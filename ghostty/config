@@ -7,3 +7,13 @@ window-theme = ghostty
 
 keybind = performable:ctrl+c=copy_to_clipboard
 keybind = ctrl+v=paste_from_clipboard
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
+keybind = alt+right=goto_split:right
+keybind = alt+left=goto_split:left
+keybind = alt+shift+d=new_split:right
+keybind = alt+shift+e=new_split:down
+keybind = ctrl+shift+up=resize_split:up,10
+keybind = ctrl+shift+down=resize_split:down,10
+keybind = ctrl+shift+right=resize_split:right,10
+keybind = ctrl+shift+left=resize_split:left,10
