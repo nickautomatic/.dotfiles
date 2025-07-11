@@ -55,7 +55,6 @@ if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
 fi
 
 # mise-en-place
-[ -f ~/mise.bash ] && source ~/mise.bash
 [ -f ~/.local/bin/mise ] && eval "$(~/.local/bin/mise activate bash)"
 
 # Rust

@@ -12,6 +12,7 @@
     state: latest
     pkg:
     - ansible
+    - bash-completion
     - bat
     - build-essential
     - fd-find
