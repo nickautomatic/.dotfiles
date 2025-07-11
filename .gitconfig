@@ -1,4 +1,5 @@
 [advice]
+  forceDeleteBranch = false
   skippedCherryPicks = false
 [alias]
   a = add
