@@ -21,6 +21,7 @@ format = '[\[$symbol($output)\] ]($style)'
 shell = '/bin/bash'
 when = 'git config --global git-mob.co-author'
 style = 'purple'
+ignore_timeout = true
 
 [directory]
 style = 'yellow'
