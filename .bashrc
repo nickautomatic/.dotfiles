@@ -89,7 +89,5 @@ if [ -z "$VS_CODE_TERMINAL" ]; then
   fi
 fi
 
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-
 # Launch SSH agent:
 source ~/.dotfiles/scripts/ssh.sh
