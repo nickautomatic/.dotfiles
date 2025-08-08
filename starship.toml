@@ -24,7 +24,10 @@ style = 'purple'
 ignore_timeout = true
 
 [directory]
+truncate_to_repo = false
 style = 'yellow'
+repo_root_style = 'yellow'
+before_repo_root_style = 'dimmed white'
 
 [git_branch]
 format = '[\($branch(:$remote_branch)]($style)'
@@ -33,7 +36,7 @@ style = 'cyan'
 [git_commit]
 format = '[$hash]($style) '
 only_detached = false
-style = "black"
+style = 'dimmed white'
 
 [git_status]
 format = '( [$all_status$ahead_behind]($style))[\) ]($style)'
