@@ -16,3 +16,7 @@
   args:
     creates: ~/.local/share/mise/installs/ruby/{{ ruby_version }}
     executable: /bin/bash
+
+- name: Tell mise to check .ruby-version
+  tags: [ ruby ]
+  command: mise settings add idiomatic_version_file_enable_tools ruby

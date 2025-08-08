@@ -19,6 +19,10 @@
     global: yes
     executable: npm
 
+- name: Tell mise to check .node-version
+  tags: [ node ]
+  command: mise settings add idiomatic_version_file_enable_tools node
+
 - name: Install some npm packages
   tags: [ node, npm ]
   command: "mise use --global npm:{{ item }}@latest"
