@@ -4,3 +4,7 @@
   register: output
   changed_when:
   - '"installed" in output.stderr'
+
+- name: Configure gh
+  tags: [ gh ]
+  shell: gh config set browser browse
