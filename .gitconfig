@@ -46,7 +46,7 @@
   swc = switch --no-track --create
   sync = "!git fetch && git reset --hard @{upstream}"
   upstream = rev-parse --abbrev-ref HEAD@{upstream}
-  wip = "!git add . && git commit --no-verify -m 'WIP'"
+  wip = "!git add . && git commit --no-verify -m 'WIP [skip ci]'"
 [blame]
   coloring = highlightRecent
 [branch]
