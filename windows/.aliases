@@ -1,0 +1,12 @@
+## Vagrant
+alias v='vagrant'
+alias vagrant='cmd.exe /c vagrant'
+
+## Windows executables:
+alias explore='explorer.exe'
+alias explorer='explorer.exe'
+alias keepassxc-cli='/mnt/c/Program\ Files/KeePassXC/keepassxc-cli.exe'
+alias multipass='/mnt/c/Program\ Files/Multipass/bin/multipass.exe'
+alias open='cmd.exe /C start'
+alias start='cmd.exe /C start'
+alias winget='winget.exe'
