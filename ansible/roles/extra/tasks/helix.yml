@@ -1,16 +1,9 @@
-- name: Add Helix PPA repository
+- name: Install helix
   tags: [ helix ]
-  become: yes
-  apt_repository:
-    repo: ppa:maveonair/helix-editor
-
-- name: Install Helix
-  tags: [ helix ]
-  become: yes
+  become: true
   apt:
-    state: latest
-    pkg:
-    - helix
+    deb: https://github.com/helix-editor/helix/releases/download/25.07.1/helix_25.7.1-1_amd64.deb
+    state: present
 
 - name: Symlink Helix config file
   tags: [ helix ]
