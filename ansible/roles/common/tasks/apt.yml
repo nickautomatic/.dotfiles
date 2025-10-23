@@ -28,6 +28,7 @@
     - silversearcher-ag
     - software-properties-common
     - tig
+    - tealdeer
     - unzip
     - vim
     - zip
