@@ -30,6 +30,7 @@ export BAT_CONFIG_PATH="$HOME/.batcatrc"
 export CHEAT_USE_FZF=true
 
 # eza
+export EZA_ICON_SPACING=2
 export EZA_CONFIG_DIR="$HOME/.dotfiles/eza"
 
 # fzf
