@@ -25,7 +25,6 @@
     - pv
     - python3-apt
     - ripgrep
-    - silversearcher-ag
     - software-properties-common
     - tig
     - tealdeer
