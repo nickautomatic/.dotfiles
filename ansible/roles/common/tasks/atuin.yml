@@ -2,7 +2,7 @@
   tags: [ atuin ]
   shell: bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
   args:
-    creates: /usr/bin/atuin
+    creates: "{{ home }}/.atuin/bin/atuin"
     executable: /bin/bash
   register: atuin_install
 
@@ -29,10 +29,10 @@
 
 - name: Import existing shell history
   tags: [ atuin ]
-  shell: atuin import auto
+  shell: "{{ home }}/.atuin/bin/atuin import auto"
   when: atuin_install.changed
 
 - name: Generate completions for atuin
   tags: [ atuin ]
-  shell: atuin gen-completions --shell bash --out-dir $HOME
+  shell: "{{ home }}/.atuin/bin/atuin gen-completions --shell bash --out-dir $HOME"
   when: atuin_install.changed or atuin_update.changed
