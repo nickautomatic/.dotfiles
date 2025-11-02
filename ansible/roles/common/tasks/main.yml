@@ -1,10 +1,13 @@
 ---
 - import_tasks: apt.yml
+- import_tasks: atuin.yml
 - import_tasks: bash.yml
+- import_tasks: mise.yml
 - import_tasks: delta.yml
+- import_tasks: eza.yml
 - import_tasks: fzf.yml
 - import_tasks: git.yml
-- import_tasks: mise.yml
+- import_tasks: helix.yml
 - import_tasks: node.yml
 - import_tasks: starship.yml
 - import_tasks: symlinks.yml
