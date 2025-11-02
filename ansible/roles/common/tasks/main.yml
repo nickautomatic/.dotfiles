@@ -1,7 +1,7 @@
 ---
 - import_tasks: apt.yml
-- import_tasks: atuin.yml
 - import_tasks: bash.yml
+- import_tasks: atuin.yml
 - import_tasks: mise.yml
 - import_tasks: delta.yml
 - import_tasks: eza.yml
