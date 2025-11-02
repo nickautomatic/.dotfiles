@@ -3,6 +3,7 @@
   become: yes
   apt_repository:
     repo: ppa:git-core/ppa
+    codename: "{{ '' if ansible_facts['distribution'] == 'Ubuntu' else 'noble' }}"
 
 - name: Install latest stable version of git
   tags: [ git ]
