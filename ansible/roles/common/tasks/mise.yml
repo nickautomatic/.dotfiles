@@ -23,7 +23,7 @@
 
 - name: Update mise to latest version
   tags: [ mise ]
-  shell: mise self-update --yes
+  shell: ~/.local/bin/mise self-update --yes
   register: output
   changed_when:
     - '"New release found" in output.stderr'
