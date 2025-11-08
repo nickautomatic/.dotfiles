@@ -1,0 +1,11 @@
+- name: Identify batcat's config directory
+  tags: [ bat ]
+  shell: batcat --config-dir
+  register: batcat_config_dir
+
+- name: Install Catppuccin Mocha theme for bat
+  tags: [ bat ]
+  shell: wget -P "{{ batcat_config_dir.stdout }}/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+  args:
+    creates: "{{ batcat_config_dir.stdout }}/themes/Catppuccin Mocha.tmTheme"
+    executable: /bin/bash
