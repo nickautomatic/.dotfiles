@@ -40,7 +40,7 @@ if [[ -x `which rg` ]]; then
 fi
 
 # man
-export MANPAGER="less -R --use-color -Dd+y -Du+208 -DN+r"
+export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | batcat -p -lman'"
 
 # n
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
