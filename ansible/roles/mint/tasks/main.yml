@@ -1,3 +1,4 @@
 ---
 - import_tasks: docker.yml
 - import_tasks: ghostty.yml
+- import_tasks: signal.yml
