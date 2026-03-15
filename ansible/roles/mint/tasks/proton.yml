@@ -1,0 +1,14 @@
+- name: Install ProtonVPN config + keys
+  become: true
+  tags: [ proton ]
+  apt:
+    deb: https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
+    state: present
+
+- name: Install ProtonVPN
+  become: true
+  tags: [ proton ]
+  apt:
+    update_cache: yes
+    pkg: proton-vpn-gnome-desktop
+    state: latest
