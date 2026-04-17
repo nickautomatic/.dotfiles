@@ -3,3 +3,4 @@
 - import_tasks: ghostty.yml
 - import_tasks: proton.yml
 - import_tasks: signal.yml
+- import_tasks: zed.yml
