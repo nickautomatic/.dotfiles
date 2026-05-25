@@ -9,3 +9,8 @@
   args:
     creates: "{{ batcat_config_dir.stdout }}/themes/Catppuccin Mocha.tmTheme"
     executable: /bin/bash
+
+- name: Update batcat's cache
+  tags: [ bat ]
+  shell: batcat cache --build
+
