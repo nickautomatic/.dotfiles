@@ -1,0 +1,13 @@
+# To use Oryx on Linux:
+#
+# 1. Copy this file to /etc/udev/rules.d/50-zsa.rules
+# 2. Make sure user is part of the plugdev group:
+#    sudo groupadd plugdev
+#    sudo usermod -aG plugdev $USER
+
+# Rules for Oryx web flashing and live training
+KERNEL=="hidraw*", ATTRS{idVendor}=="16c0", MODE="0664", GROUP="plugdev"
+KERNEL=="hidraw*", ATTRS{idVendor}=="3297", MODE="0664", GROUP="plugdev"
+
+# Keymapp Flashing rules for the Voyager
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
