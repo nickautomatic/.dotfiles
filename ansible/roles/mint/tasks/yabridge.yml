@@ -4,3 +4,28 @@
     && tar xf yabridge-{{ yabridge_version }}.tar.gz -C $HOME/.local/share
     && rm yabridge-{{ yabridge_version }}.tar.gz
 
+- name: Install yq
+  tags: [ yabridge ]
+  become: yes
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    state: latest
+    pkg:
+    - yq
+  register: apt
+
+#---
+# Reporting:
+#---
+- name: Identify installed and upgraded packages
+  tags: [ apt ]
+  shell: grep -E "^$(date +%Y-%m-%d).+ (install|upgrade) " /var/log/dpkg.log |cut -d " " -f 3-6
+  register: result
+  when: apt.changed
+
+- name: Show installed and upgraded packages
+  tags: [ apt ]
+  debug:
+    msg: "{{ result.stdout_lines }}"
+  when: apt.changed
