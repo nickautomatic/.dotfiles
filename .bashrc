@@ -68,6 +68,9 @@ eval "$(starship init bash)"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 
+# yabridge
+export PATH="$PATH:$HOME/.local/share/yabridge"
+
 # z
 [ -r ~/bin/z.sh ] && source ~/bin/z.sh
 

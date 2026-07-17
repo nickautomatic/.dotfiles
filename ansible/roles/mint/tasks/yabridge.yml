@@ -1,0 +1,6 @@
+- name: Download yabridge
+  tags: [ yabridge ]
+  shell: wget https://github.com/robbert-vdh/yabridge/releases/download/5.1.1/yabridge-5.1.1.tar.gz -q -o /dev/null \
+    && tar xf yabridge-5.1.1.tar.gz -C $HOME/.local/share
+    && rm yabridge-5.1.1.tar.gz
+
