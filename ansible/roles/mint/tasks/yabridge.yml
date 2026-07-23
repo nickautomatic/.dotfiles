@@ -4,6 +4,30 @@
     && tar xf yabridge-{{ yabridge_version }}.tar.gz -C $HOME/.local/share
     && rm yabridge-{{ yabridge_version }}.tar.gz
 
+- name: Download and add wine-staging repository key
+  tags: [ yabridge ]
+  become: true
+  shell: mkdir -pm755 /etc/apt/keyrings \
+    && wget -O - https://dl.winehq.org/wine-builds/winehq.key | gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
+
+- name: Enable wine-staging repository
+  tags: [ yabridge ]
+  become: true
+  shell: dpkg --add-architecture i386 \
+    && wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
+  args:
+    creates: /etc/apt/sources.list.d/winehq-noble.sources
+
+- name: Install wine-staging
+  tags: [ yabridge ]
+  become: true
+  apt:
+    state: latest
+    update_cache: yes
+    cache_valid_time: 3600
+    pkg:
+    - winehq-staging
+
 - name: Set global environment variables for yabridge-bottles-wineloader
   tags: [ yabridge ]
   ansible.builtin.blockinfile:
