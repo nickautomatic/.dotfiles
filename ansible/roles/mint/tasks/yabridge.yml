@@ -4,6 +4,15 @@
     && tar xf yabridge-{{ yabridge_version }}.tar.gz -C $HOME/.local/share
     && rm yabridge-{{ yabridge_version }}.tar.gz
 
+- name: Set global environment variables for yabridge-bottles-wineloader
+  tags: [ yabridge ]
+  ansible.builtin.blockinfile:
+    path: ~/.profile
+    prepend_newline: true
+    block: |
+      export WINEPREFIX="$HOME/.var/app/com.usebottles.bottles/data/bottles/bottles/VSTs"
+      export WINELOADER="$HOME/.dotfiles/scripts/wineloader.sh"
+
 - name: Install yq
   tags: [ yabridge ]
   become: yes
