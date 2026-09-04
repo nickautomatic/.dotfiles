@@ -78,16 +78,5 @@ z() {
   cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
-# Zellij
-export ZELLIJ_CONFIG_DIR="$HOME/.dotfiles/zellij"
-export ZELLIJ_AUTO_EXIT=true
-ZELLIJ_COMPLETIONS="$HOME/.dotfiles/private/zellij-completions.bash"
-[ -r $ZELLIJ_COMPLETIONS ] && source $ZELLIJ_COMPLETIONS
-if [ -z "$VS_CODE_TERMINAL" ]; then
-  if [[ -x `which zellij` ]]; then
-    eval "$(zellij setup --generate-auto-start bash)"
-  fi
-fi
-
 # Launch SSH agent:
 source ~/.dotfiles/scripts/ssh.sh
