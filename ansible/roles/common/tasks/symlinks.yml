@@ -9,8 +9,6 @@
   - .default-gems
   - .editorconfig
   - .gemrc
-  - .gitattributes
-  - .gitignore_global
   - .inputrc
   - .tigrc
   - .tmux.conf

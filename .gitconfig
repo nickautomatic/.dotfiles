@@ -56,9 +56,9 @@
 [commit]
   verbose = true
 [core]
-  attributesfile = ~/.gitattributes
+  attributesfile = ~/.dotfiles/.gitattributes
   editor = hx
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.dotfiles/.gitignore_global
   pager = "if [ $COLUMNS -gt 130 ]; then P='delta --side-by-side'; else P='delta'; fi; $P"
 [delta]
   line-numbers-minus-style = tomato
