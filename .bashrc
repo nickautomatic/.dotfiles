@@ -42,10 +42,6 @@ fi
 # man
 export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | batcat -p -lman'"
 
-# n
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-export PATH="$N_PREFIX/bin:$PATH"
-
 # Marker
 if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
   export MARKER_KEY_GET="\C-x"
