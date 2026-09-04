@@ -60,10 +60,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export STARSHIP_CONFIG="$HOME/.dotfiles/starship.toml"
 eval "$(starship init bash)"
 
-# Vagrant
-export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
-export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
-
 # z
 [ -r ~/bin/z.sh ] && source ~/bin/z.sh
 
