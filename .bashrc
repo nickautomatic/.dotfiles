@@ -24,7 +24,7 @@ ATUIN_COMPLETIONS=~/atuin.bash
 export ATUIN_CONFIG_DIR="$HOME/.dotfiles/atuin"
 
 # batcat
-export BAT_CONFIG_PATH="$HOME/.batcatrc"
+export BAT_CONFIG_PATH="$HOME/.dotfiles/.batcatrc"
 
 # cheat
 export CHEAT_USE_FZF=true
