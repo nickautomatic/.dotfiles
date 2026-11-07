@@ -1,0 +1,27 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor]
+highlight-line = true
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+X = "select_line_above"
+
+[keys.normal.space]
+l = ":reflow"
+
+[keys.select]
+X = "select_line_above"
+
+[terminal]
+true-color = true
