@@ -1,5 +1,7 @@
 autoload -Uz compinit && compinit
 
+bindkey '≥' insert-last-word
+
 source ~/.dotfiles/.aliases
 
 # atuin
