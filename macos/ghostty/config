@@ -1,0 +1,10 @@
+font-thicken = true
+font-thicken-strength = 100
+minimum-contrast = 1.1
+theme = Catppuccin Mocha
+window-padding-x = 10
+window-padding-y = 5
+
+keybind = cmd+l=text:\x0C
+keybind = cmd+r=text:\x12
+keybind = cmd+w=text:\x17
